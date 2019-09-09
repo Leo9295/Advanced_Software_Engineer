@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.poFile org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicateSet name="CTXHYP" org.eventb.core.poStamp="1">
+<org.eventb.core.poIdentifier name="BOOK" org.eventb.core.type="ℙ(BOOK)"/>
+<org.eventb.core.poIdentifier name="COPY" org.eventb.core.type="ℙ(COPY)"/>
+<org.eventb.core.poIdentifier name="NOTIFICATION" org.eventb.core.type="ℙ(NOTIFICATION)"/>
+<org.eventb.core.poIdentifier name="USER" org.eventb.core.type="ℙ(USER)"/>
+<org.eventb.core.poIdentifier name="book_sets" org.eventb.core.type="ℙ(COPY×BOOK)"/>
+<org.eventb.core.poIdentifier name="maxuser" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="notification" org.eventb.core.type="ℙ(BOOK×USER)"/>
+<org.eventb.core.poPredicate name="notificatioo" org.eventb.core.predicate="book_sets∈COPY → BOOK" org.eventb.core.source="/FIT5138Assignment3/LibraryContext.buc|org.eventb.core.contextFile#LibraryContext|org.eventb.core.axiom#+"/>
+<org.eventb.core.poPredicate name="notificatiop" org.eventb.core.predicate="maxuser∈ℕ1" org.eventb.core.source="/FIT5138Assignment3/LibraryContext.buc|org.eventb.core.contextFile#LibraryContext|org.eventb.core.axiom#-"/>
+<org.eventb.core.poPredicate name="notificatioq" org.eventb.core.predicate="finite(USER)" org.eventb.core.source="/FIT5138Assignment3/LibraryContext.buc|org.eventb.core.contextFile#LibraryContext|org.eventb.core.axiom#."/>
+<org.eventb.core.poPredicate name="notificatior" org.eventb.core.predicate="card(USER)=maxuser" org.eventb.core.source="/FIT5138Assignment3/LibraryContext.buc|org.eventb.core.contextFile#LibraryContext|org.eventb.core.axiom#\/"/>
+<org.eventb.core.poPredicate name="notificatios" org.eventb.core.predicate="notification∈BOOK ↔ USER" org.eventb.core.source="/FIT5138Assignment3/LibraryContext.buc|org.eventb.core.contextFile#LibraryContext|org.eventb.core.axiom#2"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.parentSet="/FIT5138Assignment3/LibraryRequestSystem.bpo|org.eventb.core.poFile#LibraryRequestSystem|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="1">
+<org.eventb.core.poIdentifier name="books_in_library" org.eventb.core.type="ℙ(BOOK)"/>
+<org.eventb.core.poIdentifier name="copies_in_library" org.eventb.core.type="ℙ(COPY)"/>
+<org.eventb.core.poIdentifier name="copies_on_loan" org.eventb.core.type="ℙ(COPY×USER)"/>
+<org.eventb.core.poIdentifier name="copies_on_shelf" org.eventb.core.type="ℙ(COPY)"/>
+<org.eventb.core.poIdentifier name="library_book_sets" org.eventb.core.type="ℙ(COPY×BOOK)"/>
+<org.eventb.core.poIdentifier name="notify" org.eventb.core.type="ℙ(BOOK×USER)"/>
+<org.eventb.core.poIdentifier name="registered_users" org.eventb.core.type="ℙ(USER)"/>
+<org.eventb.core.poIdentifier name="request" org.eventb.core.type="ℙ(BOOK×USER)"/>
+<org.eventb.core.poIdentifier name="request_hold" org.eventb.core.type="ℙ(COPY×USER)"/>
+<org.eventb.core.poPredicate name="library_book_sett" org.eventb.core.predicate="registered_users⊆USER" org.eventb.core.source="/FIT5138Assignment3/BasicLibrary.bum|org.eventb.core.machineFile#BasicLibrary|org.eventb.core.invariant#\/"/>
+<org.eventb.core.poPredicate name="library_book_setu" org.eventb.core.predicate="books_in_library⊆BOOK" org.eventb.core.source="/FIT5138Assignment3/BasicLibrary.bum|org.eventb.core.machineFile#BasicLibrary|org.eventb.core.invariant#0"/>
+<org.eventb.core.poPredicate name="library_book_setv" org.eventb.core.predicate="copies_in_library⊆COPY" org.eventb.core.source="/FIT5138Assignment3/BasicLibrary.bum|org.eventb.core.machineFile#BasicLibrary|org.eventb.core.invariant#1"/>
+<org.eventb.core.poPredicate name="library_book_setw" org.eventb.core.predicate="copies_on_loan∈copies_in_library ⇸ registered_users" org.eventb.core.source="/FIT5138Assignment3/BasicLibrary.bum|org.eventb.core.machineFile#BasicLibrary|org.eventb.core.invariant#6"/>
+<org.eventb.core.poPredicate name="library_book_setx" org.eventb.core.predicate="copies_on_shelf=copies_in_library ∖ dom(copies_on_loan)" org.eventb.core.source="/FIT5138Assignment3/BasicLibrary.bum|org.eventb.core.machineFile#BasicLibrary|org.eventb.core.invariant#7"/>
+<org.eventb.core.poPredicate name="library_book_sety" org.eventb.core.predicate="library_book_sets∈copies_in_library → books_in_library" org.eventb.core.source="/FIT5138Assignment3/BasicLibrary.bum|org.eventb.core.machineFile#BasicLibrary|org.eventb.core.invariant#&gt;"/>
+<org.eventb.core.poPredicate name="library_book_setz" org.eventb.core.predicate="library_book_sets⊆book_sets" org.eventb.core.source="/FIT5138Assignment3/BasicLibrary.bum|org.eventb.core.machineFile#BasicLibrary|org.eventb.core.invariant#@"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="INITIALISATION/inv1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/FIT5138Assignment3/LibraryRequestSystem.bpo|org.eventb.core.poFile#LibraryRequestSystem|org.eventb.core.poPredicateSet#EVTALLHYPlibrary_book_sett"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(∅ ⦂ ℙ(BOOK×USER))∈BOOK ∖ (∅ ⦂ ℙ(BOOK)) ⇸ (∅ ⦂ ℙ(USER))" org.eventb.core.source="/FIT5138Assignment3/LibraryRequestSystem.bum|org.eventb.core.machineFile#LibraryRequestSystem|org.eventb.core.invariant#2"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/FIT5138Assignment3/BasicLibrary.bum|org.eventb.core.machineFile#BasicLibrary|org.eventb.core.event#'"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/FIT5138Assignment3/LibraryRequestSystem.bum|org.eventb.core.machineFile#LibraryRequestSystem|org.eventb.core.event#'"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/FIT5138Assignment3/LibraryRequestSystem.bum|org.eventb.core.machineFile#LibraryRequestSystem|org.eventb.core.invariant#2"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/FIT5138Assignment3/LibraryRequestSystem.bpo|org.eventb.core.poFile#LibraryRequestSystem|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/FIT5138Assignment3/LibraryRequestSystem.bpo|org.eventb.core.poFile#LibraryRequestSystem|org.eventb.core.poSequent#INITIALISATION\/inv1\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/FIT5138Assignment3/LibraryRequestSystem.bpo|org.eventb.core.poFile#LibraryRequestSystem|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD0"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="INITIALISATION/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/FIT5138Assignment3/LibraryRequestSystem.bpo|org.eventb.core.poFile#LibraryRequestSystem|org.eventb.core.poPredicateSet#EVTALLHYPlibrary_book_sett"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(∅ ⦂ ℙ(COPY×USER))∈(∅ ⦂ ℙ(COPY)) ⤖ (∅ ⦂ ℙ(USER))" org.eventb.core.source="/FIT5138Assignment3/LibraryRequestSystem.bum|org.eventb.core.machineFile#LibraryRequestSystem|org.eventb.core.invariant#8"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/FIT5138Assignment3/BasicLibrary.bum|org.eventb.core.machineFile#BasicLibrary|org.eventb.core.event#'"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/FIT5138Assignment3/LibraryRequestSystem.bum|org.eventb.core.machineFile#LibraryRequestSystem|org.eventb.core.event#'"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/FIT5138Assignment3/LibraryRequestSystem.bum|org.eventb.core.machineFile#LibraryRequestSystem|org.eventb.core.invariant#8"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/FIT5138Assignment3/LibraryRequestSystem.bpo|org.eventb.core.poFile#LibraryRequestSystem|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/FIT5138Assignment3/LibraryRequestSystem.bpo|org.eventb.core.poFile#LibraryRequestSystem|org.eventb.core.poSequent#INITIALISATION\/inv2\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/FIT5138Assignment3/LibraryRequestSystem.bpo|org.eventb.core.poFile#LibraryRequestSystem|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD1"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="INITIALISATION/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/FIT5138Assignment3/LibraryRequestSystem.bpo|org.eventb.core.poFile#LibraryRequestSystem|org.eventb.core.poPredicateSet#EVTALLHYPlibrary_book_sett"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(∅ ⦂ ℙ(BOOK×USER))⊆notification" org.eventb.core.source="/FIT5138Assignment3/LibraryRequestSystem.bum|org.eventb.core.machineFile#LibraryRequestSystem|org.eventb.core.invariant#:"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/FIT5138Assignment3/BasicLibrary.bum|org.eventb.core.machineFile#BasicLibrary|org.eventb.core.event#'"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/FIT5138Assignment3/LibraryRequestSystem.bum|org.eventb.core.machineFile#LibraryRequestSystem|org.eventb.core.event#'"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/FIT5138Assignment3/LibraryRequestSystem.bum|org.eventb.core.machineFile#LibraryRequestSystem|org.eventb.core.invariant#:"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/FIT5138Assignment3/LibraryRequestSystem.bpo|org.eventb.core.poFile#LibraryRequestSystem|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/FIT5138Assignment3/LibraryRequestSystem.bpo|org.eventb.core.poFile#LibraryRequestSystem|org.eventb.core.poSequent#INITIALISATION\/inv3\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/FIT5138Assignment3/LibraryRequestSystem.bpo|org.eventb.core.poFile#LibraryRequestSystem|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD2"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTlibrary_book_sett" org.eventb.core.parentSet="/FIT5138Assignment3/LibraryRequestSystem.bpo|org.eventb.core.poFile#LibraryRequestSystem|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="1">
+<org.eventb.core.poIdentifier name="registered_users'" org.eventb.core.type="ℙ(USER)"/>
+<org.eventb.core.poIdentifier name="request_hold'" org.eventb.core.type="ℙ(COPY×USER)"/>
+<org.eventb.core.poIdentifier name="books_in_library'" org.eventb.core.type="ℙ(BOOK)"/>
+<org.eventb.core.poIdentifier name="library_book_sets'" org.eventb.core.type="ℙ(COPY×BOOK)"/>
+<org.eventb.core.poIdentifier name="copies_on_loan'" org.eventb.core.type="ℙ(COPY×USER)"/>
+<org.eventb.core.poIdentifier name="copies_in_library'" org.eventb.core.type="ℙ(COPY)"/>
+<org.eventb.core.poIdentifier name="copies_on_shelf'" org.eventb.core.type="ℙ(COPY)"/>
+<org.eventb.core.poIdentifier name="request'" org.eventb.core.type="ℙ(BOOK×USER)"/>
+<org.eventb.core.poIdentifier name="notify'" org.eventb.core.type="ℙ(BOOK×USER)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPlibrary_book_sett" org.eventb.core.parentSet="/FIT5138Assignment3/LibraryRequestSystem.bpo|org.eventb.core.poFile#LibraryRequestSystem|org.eventb.core.poPredicateSet#EVTIDENTlibrary_book_sett" org.eventb.core.poStamp="1"/>
+<org.eventb.core.poSequent name="RequestNewBook/grd4/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/FIT5138Assignment3/LibraryRequestSystem.bpo|org.eventb.core.poFile#LibraryRequestSystem|org.eventb.core.poPredicateSet#EVTHYPlibrary_book_setu)"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="finite(request ▷ {user})" org.eventb.core.source="/FIT5138Assignment3/LibraryRequestSystem.bum|org.eventb.core.machineFile#LibraryRequestSystem|org.eventb.core.event#3|org.eventb.core.guard#-"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/FIT5138Assignment3/LibraryRequestSystem.bum|org.eventb.core.machineFile#LibraryRequestSystem|org.eventb.core.event#3|org.eventb.core.guard#-"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/FIT5138Assignment3/LibraryRequestSystem.bpo|org.eventb.core.poFile#LibraryRequestSystem|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/FIT5138Assignment3/LibraryRequestSystem.bpo|org.eventb.core.poFile#LibraryRequestSystem|org.eventb.core.poPredicateSet#EVTHYPlibrary_book_setu)"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="RequestNewBook/inv1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/FIT5138Assignment3/LibraryRequestSystem.bpo|org.eventb.core.poFile#LibraryRequestSystem|org.eventb.core.poPredicateSet#EVTALLHYPlibrary_book_setu"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="request∪{book ↦ user}∈BOOK ∖ books_in_library ⇸ registered_users" org.eventb.core.source="/FIT5138Assignment3/LibraryRequestSystem.bum|org.eventb.core.machineFile#LibraryRequestSystem|org.eventb.core.invariant#2"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/FIT5138Assignment3/LibraryRequestSystem.bum|org.eventb.core.machineFile#LibraryRequestSystem|org.eventb.core.event#3"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/FIT5138Assignment3/LibraryRequestSystem.bum|org.eventb.core.machineFile#LibraryRequestSystem|org.eventb.core.invariant#2"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/FIT5138Assignment3/LibraryRequestSystem.bpo|org.eventb.core.poFile#LibraryRequestSystem|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/FIT5138Assignment3/LibraryRequestSystem.bpo|org.eventb.core.poFile#LibraryRequestSystem|org.eventb.core.poSequent#RequestNewBook\/inv1\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/FIT5138Assignment3/LibraryRequestSystem.bpo|org.eventb.core.poFile#LibraryRequestSystem|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD0"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="RequestNewBook/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/FIT5138Assignment3/LibraryRequestSystem.bpo|org.eventb.core.poFile#LibraryRequestSystem|org.eventb.core.poPredicateSet#EVTALLHYPlibrary_book_setu"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="notify∪{book ↦ user}⊆notification" org.eventb.core.source="/FIT5138Assignment3/LibraryRequestSystem.bum|org.eventb.core.machineFile#LibraryRequestSystem|org.eventb.core.invariant#:"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/FIT5138Assignment3/LibraryRequestSystem.bum|org.eventb.core.machineFile#LibraryRequestSystem|org.eventb.core.event#3"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/FIT5138Assignment3/LibraryRequestSystem.bum|org.eventb.core.machineFile#LibraryRequestSystem|org.eventb.core.invariant#:"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/FIT5138Assignment3/LibraryRequestSystem.bpo|org.eventb.core.poFile#LibraryRequestSystem|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/FIT5138Assignment3/LibraryRequestSystem.bpo|org.eventb.core.poFile#LibraryRequestSystem|org.eventb.core.poSequent#RequestNewBook\/inv3\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/FIT5138Assignment3/LibraryRequestSystem.bpo|org.eventb.core.poFile#LibraryRequestSystem|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD2"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTlibrary_book_setu" org.eventb.core.parentSet="/FIT5138Assignment3/LibraryRequestSystem.bpo|org.eventb.core.poFile#LibraryRequestSystem|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="1">
+<org.eventb.core.poIdentifier name="user" org.eventb.core.type="USER"/>
+<org.eventb.core.poIdentifier name="book" org.eventb.core.type="BOOK"/>
+<org.eventb.core.poIdentifier name="request'" org.eventb.core.type="ℙ(BOOK×USER)"/>
+<org.eventb.core.poIdentifier name="notify'" org.eventb.core.type="ℙ(BOOK×USER)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTHYPlibrary_book_setu)" org.eventb.core.parentSet="/FIT5138Assignment3/LibraryRequestSystem.bpo|org.eventb.core.poFile#LibraryRequestSystem|org.eventb.core.poPredicateSet#EVTIDENTlibrary_book_setu" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="user∈registered_users" org.eventb.core.source="/FIT5138Assignment3/LibraryRequestSystem.bum|org.eventb.core.machineFile#LibraryRequestSystem|org.eventb.core.event#3|org.eventb.core.guard#)"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="book∉books_in_library" org.eventb.core.source="/FIT5138Assignment3/LibraryRequestSystem.bum|org.eventb.core.machineFile#LibraryRequestSystem|org.eventb.core.event#3|org.eventb.core.guard#*"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="book ↦ user∉request" org.eventb.core.source="/FIT5138Assignment3/LibraryRequestSystem.bum|org.eventb.core.machineFile#LibraryRequestSystem|org.eventb.core.event#3|org.eventb.core.guard#,"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPlibrary_book_setu" org.eventb.core.parentSet="/FIT5138Assignment3/LibraryRequestSystem.bpo|org.eventb.core.poFile#LibraryRequestSystem|org.eventb.core.poPredicateSet#EVTHYPlibrary_book_setu)" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="card(request ▷ {user})∈0 ‥ 2" org.eventb.core.source="/FIT5138Assignment3/LibraryRequestSystem.bum|org.eventb.core.machineFile#LibraryRequestSystem|org.eventb.core.event#3|org.eventb.core.guard#-"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="AddRequestBook/inv1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/FIT5138Assignment3/LibraryRequestSystem.bpo|org.eventb.core.poFile#LibraryRequestSystem|org.eventb.core.poPredicateSet#EVTALLHYPlibrary_book_setv"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="request ∖ ({book} ◁ request)∈BOOK ∖ (books_in_library∪{book}) ⇸ registered_users" org.eventb.core.source="/FIT5138Assignment3/LibraryRequestSystem.bum|org.eventb.core.machineFile#LibraryRequestSystem|org.eventb.core.invariant#2"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/FIT5138Assignment3/BasicLibrary.bum|org.eventb.core.machineFile#BasicLibrary|org.eventb.core.event#:"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/FIT5138Assignment3/LibraryRequestSystem.bum|org.eventb.core.machineFile#LibraryRequestSystem|org.eventb.core.event#4"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/FIT5138Assignment3/LibraryRequestSystem.bum|org.eventb.core.machineFile#LibraryRequestSystem|org.eventb.core.invariant#2"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/FIT5138Assignment3/LibraryRequestSystem.bpo|org.eventb.core.poFile#LibraryRequestSystem|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/FIT5138Assignment3/LibraryRequestSystem.bpo|org.eventb.core.poFile#LibraryRequestSystem|org.eventb.core.poSequent#AddRequestBook\/inv1\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/FIT5138Assignment3/LibraryRequestSystem.bpo|org.eventb.core.poFile#LibraryRequestSystem|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD0"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="AddRequestBook/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/FIT5138Assignment3/LibraryRequestSystem.bpo|org.eventb.core.poFile#LibraryRequestSystem|org.eventb.core.poPredicateSet#EVTALLHYPlibrary_book_setv"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="request_hold∪hold_info∈copies_on_shelf∪copies ⤖ registered_users" org.eventb.core.source="/FIT5138Assignment3/LibraryRequestSystem.bum|org.eventb.core.machineFile#LibraryRequestSystem|org.eventb.core.invariant#8"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/FIT5138Assignment3/BasicLibrary.bum|org.eventb.core.machineFile#BasicLibrary|org.eventb.core.event#:"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/FIT5138Assignment3/LibraryRequestSystem.bum|org.eventb.core.machineFile#LibraryRequestSystem|org.eventb.core.event#4"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/FIT5138Assignment3/LibraryRequestSystem.bum|org.eventb.core.machineFile#LibraryRequestSystem|org.eventb.core.invariant#8"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/FIT5138Assignment3/LibraryRequestSystem.bpo|org.eventb.core.poFile#LibraryRequestSystem|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/FIT5138Assignment3/LibraryRequestSystem.bpo|org.eventb.core.poFile#LibraryRequestSystem|org.eventb.core.poSequent#AddRequestBook\/inv2\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/FIT5138Assignment3/LibraryRequestSystem.bpo|org.eventb.core.poFile#LibraryRequestSystem|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD1"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="AddRequestBook/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/FIT5138Assignment3/LibraryRequestSystem.bpo|org.eventb.core.poFile#LibraryRequestSystem|org.eventb.core.poPredicateSet#EVTALLHYPlibrary_book_setv"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="notify⊆notification" org.eventb.core.source="/FIT5138Assignment3/LibraryRequestSystem.bum|org.eventb.core.machineFile#LibraryRequestSystem|org.eventb.core.invariant#:"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/FIT5138Assignment3/BasicLibrary.bum|org.eventb.core.machineFile#BasicLibrary|org.eventb.core.event#:"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/FIT5138Assignment3/LibraryRequestSystem.bum|org.eventb.core.machineFile#LibraryRequestSystem|org.eventb.core.event#4"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/FIT5138Assignment3/LibraryRequestSystem.bum|org.eventb.core.machineFile#LibraryRequestSystem|org.eventb.core.invariant#:"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/FIT5138Assignment3/LibraryRequestSystem.bpo|org.eventb.core.poFile#LibraryRequestSystem|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/FIT5138Assignment3/LibraryRequestSystem.bpo|org.eventb.core.poFile#LibraryRequestSystem|org.eventb.core.poSequent#AddRequestBook\/inv3\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/FIT5138Assignment3/LibraryRequestSystem.bpo|org.eventb.core.poFile#LibraryRequestSystem|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD2"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTlibrary_book_setv" org.eventb.core.parentSet="/FIT5138Assignment3/LibraryRequestSystem.bpo|org.eventb.core.poFile#LibraryRequestSystem|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="1">
+<org.eventb.core.poIdentifier name="hold_copy" org.eventb.core.type="ℙ(COPY)"/>
+<org.eventb.core.poIdentifier name="copies" org.eventb.core.type="ℙ(COPY)"/>
+<org.eventb.core.poIdentifier name="users" org.eventb.core.type="ℙ(USER)"/>
+<org.eventb.core.poIdentifier name="request_hold'" org.eventb.core.type="ℙ(COPY×USER)"/>
+<org.eventb.core.poIdentifier name="books_in_library'" org.eventb.core.type="ℙ(BOOK)"/>
+<org.eventb.core.poIdentifier name="library_book_sets'" org.eventb.core.type="ℙ(COPY×BOOK)"/>
+<org.eventb.core.poIdentifier name="book_set" org.eventb.core.type="ℙ(COPY×BOOK)"/>
+<org.eventb.core.poIdentifier name="copies_in_library'" org.eventb.core.type="ℙ(COPY)"/>
+<org.eventb.core.poIdentifier name="book" org.eventb.core.type="BOOK"/>
+<org.eventb.core.poIdentifier name="copies_on_shelf'" org.eventb.core.type="ℙ(COPY)"/>
+<org.eventb.core.poIdentifier name="hold_info" org.eventb.core.type="ℙ(COPY×USER)"/>
+<org.eventb.core.poIdentifier name="request'" org.eventb.core.type="ℙ(BOOK×USER)"/>
+<org.eventb.core.poIdentifier name="notify'" org.eventb.core.type="ℙ(BOOK×USER)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPlibrary_book_setv" org.eventb.core.parentSet="/FIT5138Assignment3/LibraryRequestSystem.bpo|org.eventb.core.poFile#LibraryRequestSystem|org.eventb.core.poPredicateSet#EVTIDENTlibrary_book_setv" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="book∈BOOK" org.eventb.core.source="/FIT5138Assignment3/BasicLibrary.bum|org.eventb.core.machineFile#BasicLibrary|org.eventb.core.event#:|org.eventb.core.guard#)"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="book∉books_in_library" org.eventb.core.source="/FIT5138Assignment3/BasicLibrary.bum|org.eventb.core.machineFile#BasicLibrary|org.eventb.core.event#:|org.eventb.core.guard#\/"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="copies⊆COPY" org.eventb.core.source="/FIT5138Assignment3/BasicLibrary.bum|org.eventb.core.machineFile#BasicLibrary|org.eventb.core.event#:|org.eventb.core.guard#*"/>
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="book_set⊆book_sets" org.eventb.core.source="/FIT5138Assignment3/BasicLibrary.bum|org.eventb.core.machineFile#BasicLibrary|org.eventb.core.event#:|org.eventb.core.guard#+"/>
+<org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="book_set∈copies → {book}" org.eventb.core.source="/FIT5138Assignment3/BasicLibrary.bum|org.eventb.core.machineFile#BasicLibrary|org.eventb.core.event#:|org.eventb.core.guard#-"/>
+<org.eventb.core.poPredicate name="PRD5" org.eventb.core.predicate="hold_copy⊆copies" org.eventb.core.source="/FIT5138Assignment3/LibraryRequestSystem.bum|org.eventb.core.machineFile#LibraryRequestSystem|org.eventb.core.event#4|org.eventb.core.guard#,"/>
+<org.eventb.core.poPredicate name="PRD6" org.eventb.core.predicate="book∈dom(request)" org.eventb.core.source="/FIT5138Assignment3/LibraryRequestSystem.bum|org.eventb.core.machineFile#LibraryRequestSystem|org.eventb.core.event#4|org.eventb.core.guard#("/>
+<org.eventb.core.poPredicate name="PRD7" org.eventb.core.predicate="users⊆ran({book} ◁ request)" org.eventb.core.source="/FIT5138Assignment3/LibraryRequestSystem.bum|org.eventb.core.machineFile#LibraryRequestSystem|org.eventb.core.event#4|org.eventb.core.guard#."/>
+<org.eventb.core.poPredicate name="PRD8" org.eventb.core.predicate="hold_info∈hold_copy ⤖ users" org.eventb.core.source="/FIT5138Assignment3/LibraryRequestSystem.bum|org.eventb.core.machineFile#LibraryRequestSystem|org.eventb.core.event#4|org.eventb.core.guard#1"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="RequestPickup/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/FIT5138Assignment3/LibraryRequestSystem.bpo|org.eventb.core.poFile#LibraryRequestSystem|org.eventb.core.poPredicateSet#EVTALLHYPlibrary_book_setw"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="request_hold ∖ {copy ↦ user}∈copies_on_shelf ∖ {copy} ⤖ registered_users" org.eventb.core.source="/FIT5138Assignment3/LibraryRequestSystem.bum|org.eventb.core.machineFile#LibraryRequestSystem|org.eventb.core.invariant#8"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/FIT5138Assignment3/BasicLibrary.bum|org.eventb.core.machineFile#BasicLibrary|org.eventb.core.event#C"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/FIT5138Assignment3/LibraryRequestSystem.bum|org.eventb.core.machineFile#LibraryRequestSystem|org.eventb.core.event#5"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/FIT5138Assignment3/LibraryRequestSystem.bum|org.eventb.core.machineFile#LibraryRequestSystem|org.eventb.core.invariant#8"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/FIT5138Assignment3/LibraryRequestSystem.bpo|org.eventb.core.poFile#LibraryRequestSystem|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/FIT5138Assignment3/LibraryRequestSystem.bpo|org.eventb.core.poFile#LibraryRequestSystem|org.eventb.core.poSequent#RequestPickup\/inv2\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/FIT5138Assignment3/LibraryRequestSystem.bpo|org.eventb.core.poFile#LibraryRequestSystem|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD1"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="RequestPickup/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/FIT5138Assignment3/LibraryRequestSystem.bpo|org.eventb.core.poFile#LibraryRequestSystem|org.eventb.core.poPredicateSet#EVTALLHYPlibrary_book_setw"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="notify ∖ related_notify⊆notification" org.eventb.core.source="/FIT5138Assignment3/LibraryRequestSystem.bum|org.eventb.core.machineFile#LibraryRequestSystem|org.eventb.core.invariant#:"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/FIT5138Assignment3/BasicLibrary.bum|org.eventb.core.machineFile#BasicLibrary|org.eventb.core.event#C"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/FIT5138Assignment3/LibraryRequestSystem.bum|org.eventb.core.machineFile#LibraryRequestSystem|org.eventb.core.event#5"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/FIT5138Assignment3/LibraryRequestSystem.bum|org.eventb.core.machineFile#LibraryRequestSystem|org.eventb.core.invariant#:"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/FIT5138Assignment3/LibraryRequestSystem.bpo|org.eventb.core.poFile#LibraryRequestSystem|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/FIT5138Assignment3/LibraryRequestSystem.bpo|org.eventb.core.poFile#LibraryRequestSystem|org.eventb.core.poSequent#RequestPickup\/inv3\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/FIT5138Assignment3/LibraryRequestSystem.bpo|org.eventb.core.poFile#LibraryRequestSystem|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD2"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTlibrary_book_setw" org.eventb.core.parentSet="/FIT5138Assignment3/LibraryRequestSystem.bpo|org.eventb.core.poFile#LibraryRequestSystem|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="1">
+<org.eventb.core.poIdentifier name="request_hold'" org.eventb.core.type="ℙ(COPY×USER)"/>
+<org.eventb.core.poIdentifier name="copies_on_loan'" org.eventb.core.type="ℙ(COPY×USER)"/>
+<org.eventb.core.poIdentifier name="user" org.eventb.core.type="USER"/>
+<org.eventb.core.poIdentifier name="related_notify" org.eventb.core.type="ℙ(BOOK×USER)"/>
+<org.eventb.core.poIdentifier name="copy" org.eventb.core.type="COPY"/>
+<org.eventb.core.poIdentifier name="copies_on_shelf'" org.eventb.core.type="ℙ(COPY)"/>
+<org.eventb.core.poIdentifier name="notify'" org.eventb.core.type="ℙ(BOOK×USER)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPlibrary_book_setw" org.eventb.core.parentSet="/FIT5138Assignment3/LibraryRequestSystem.bpo|org.eventb.core.poFile#LibraryRequestSystem|org.eventb.core.poPredicateSet#EVTIDENTlibrary_book_setw" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="user∈registered_users" org.eventb.core.source="/FIT5138Assignment3/LibraryRequestSystem.bum|org.eventb.core.machineFile#LibraryRequestSystem|org.eventb.core.event#5|org.eventb.core.guard#)"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="copy∈copies_on_shelf" org.eventb.core.source="/FIT5138Assignment3/LibraryRequestSystem.bum|org.eventb.core.machineFile#LibraryRequestSystem|org.eventb.core.event#5|org.eventb.core.guard#*"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="card(copies_on_loan ▷ {user})∈0 ‥ 4" org.eventb.core.source="/FIT5138Assignment3/LibraryRequestSystem.bum|org.eventb.core.machineFile#LibraryRequestSystem|org.eventb.core.event#5|org.eventb.core.guard#-"/>
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="copy ↦ user∈request_hold" org.eventb.core.source="/FIT5138Assignment3/LibraryRequestSystem.bum|org.eventb.core.machineFile#LibraryRequestSystem|org.eventb.core.event#5|org.eventb.core.guard#("/>
+<org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="related_notify∈ran({copy} ◁ library_book_sets) → {user}" org.eventb.core.source="/FIT5138Assignment3/LibraryRequestSystem.bum|org.eventb.core.machineFile#LibraryRequestSystem|org.eventb.core.event#5|org.eventb.core.guard#0"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="UserDegisteredWithRequest/inv1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/FIT5138Assignment3/LibraryRequestSystem.bpo|org.eventb.core.poFile#LibraryRequestSystem|org.eventb.core.poPredicateSet#EVTALLHYPlibrary_book_setx"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="request∈BOOK ∖ books_in_library ⇸ registered_users ∖ {user}" org.eventb.core.source="/FIT5138Assignment3/LibraryRequestSystem.bum|org.eventb.core.machineFile#LibraryRequestSystem|org.eventb.core.invariant#2"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/FIT5138Assignment3/BasicLibrary.bum|org.eventb.core.machineFile#BasicLibrary|org.eventb.core.event#B"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/FIT5138Assignment3/LibraryRequestSystem.bum|org.eventb.core.machineFile#LibraryRequestSystem|org.eventb.core.event#6"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/FIT5138Assignment3/LibraryRequestSystem.bum|org.eventb.core.machineFile#LibraryRequestSystem|org.eventb.core.invariant#2"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/FIT5138Assignment3/LibraryRequestSystem.bpo|org.eventb.core.poFile#LibraryRequestSystem|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/FIT5138Assignment3/LibraryRequestSystem.bpo|org.eventb.core.poFile#LibraryRequestSystem|org.eventb.core.poSequent#UserDegisteredWithRequest\/inv1\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/FIT5138Assignment3/LibraryRequestSystem.bpo|org.eventb.core.poFile#LibraryRequestSystem|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD0"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="UserDegisteredWithRequest/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/FIT5138Assignment3/LibraryRequestSystem.bpo|org.eventb.core.poFile#LibraryRequestSystem|org.eventb.core.poPredicateSet#EVTALLHYPlibrary_book_setx"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="request_hold∈copies_on_shelf ⤖ registered_users ∖ {user}" org.eventb.core.source="/FIT5138Assignment3/LibraryRequestSystem.bum|org.eventb.core.machineFile#LibraryRequestSystem|org.eventb.core.invariant#8"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/FIT5138Assignment3/BasicLibrary.bum|org.eventb.core.machineFile#BasicLibrary|org.eventb.core.event#B"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/FIT5138Assignment3/LibraryRequestSystem.bum|org.eventb.core.machineFile#LibraryRequestSystem|org.eventb.core.event#6"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/FIT5138Assignment3/LibraryRequestSystem.bum|org.eventb.core.machineFile#LibraryRequestSystem|org.eventb.core.invariant#8"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/FIT5138Assignment3/LibraryRequestSystem.bpo|org.eventb.core.poFile#LibraryRequestSystem|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/FIT5138Assignment3/LibraryRequestSystem.bpo|org.eventb.core.poFile#LibraryRequestSystem|org.eventb.core.poSequent#UserDegisteredWithRequest\/inv2\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/FIT5138Assignment3/LibraryRequestSystem.bpo|org.eventb.core.poFile#LibraryRequestSystem|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD1"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTlibrary_book_setx" org.eventb.core.parentSet="/FIT5138Assignment3/LibraryRequestSystem.bpo|org.eventb.core.poFile#LibraryRequestSystem|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="1">
+<org.eventb.core.poIdentifier name="registered_users'" org.eventb.core.type="ℙ(USER)"/>
+<org.eventb.core.poIdentifier name="user" org.eventb.core.type="USER"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPlibrary_book_setx" org.eventb.core.parentSet="/FIT5138Assignment3/LibraryRequestSystem.bpo|org.eventb.core.poFile#LibraryRequestSystem|org.eventb.core.poPredicateSet#EVTIDENTlibrary_book_setx" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="user∈registered_users" org.eventb.core.source="/FIT5138Assignment3/BasicLibrary.bum|org.eventb.core.machineFile#BasicLibrary|org.eventb.core.event#B|org.eventb.core.guard#'"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="copies_on_loan ⇸ {user}=(∅ ⦂ ℙ(ℙ(COPY×USER×USER)))" org.eventb.core.source="/FIT5138Assignment3/BasicLibrary.bum|org.eventb.core.machineFile#BasicLibrary|org.eventb.core.event#B|org.eventb.core.guard#*"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="user∉ran(request)" org.eventb.core.source="/FIT5138Assignment3/LibraryRequestSystem.bum|org.eventb.core.machineFile#LibraryRequestSystem|org.eventb.core.event#6|org.eventb.core.guard#("/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="RemoveRequestHoldCopies/inv2/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/FIT5138Assignment3/LibraryRequestSystem.bpo|org.eventb.core.poFile#LibraryRequestSystem|org.eventb.core.poPredicateSet#EVTALLHYPlibrary_book_sety"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="request_hold∈copies_on_shelf ∖ copies ⤖ registered_users" org.eventb.core.source="/FIT5138Assignment3/LibraryRequestSystem.bum|org.eventb.core.machineFile#LibraryRequestSystem|org.eventb.core.invariant#8"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/FIT5138Assignment3/BasicLibrary.bum|org.eventb.core.machineFile#BasicLibrary|org.eventb.core.event#E"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/FIT5138Assignment3/LibraryRequestSystem.bum|org.eventb.core.machineFile#LibraryRequestSystem|org.eventb.core.event#;"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/FIT5138Assignment3/LibraryRequestSystem.bum|org.eventb.core.machineFile#LibraryRequestSystem|org.eventb.core.invariant#8"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/FIT5138Assignment3/LibraryRequestSystem.bpo|org.eventb.core.poFile#LibraryRequestSystem|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/FIT5138Assignment3/LibraryRequestSystem.bpo|org.eventb.core.poFile#LibraryRequestSystem|org.eventb.core.poSequent#RemoveRequestHoldCopies\/inv2\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/FIT5138Assignment3/LibraryRequestSystem.bpo|org.eventb.core.poFile#LibraryRequestSystem|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD1"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTlibrary_book_sety" org.eventb.core.parentSet="/FIT5138Assignment3/LibraryRequestSystem.bpo|org.eventb.core.poFile#LibraryRequestSystem|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="1">
+<org.eventb.core.poIdentifier name="copies" org.eventb.core.type="ℙ(COPY)"/>
+<org.eventb.core.poIdentifier name="library_book_sets'" org.eventb.core.type="ℙ(COPY×BOOK)"/>
+<org.eventb.core.poIdentifier name="copies_in_library'" org.eventb.core.type="ℙ(COPY)"/>
+<org.eventb.core.poIdentifier name="copies_on_shelf'" org.eventb.core.type="ℙ(COPY)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPlibrary_book_sety" org.eventb.core.parentSet="/FIT5138Assignment3/LibraryRequestSystem.bpo|org.eventb.core.poFile#LibraryRequestSystem|org.eventb.core.poPredicateSet#EVTIDENTlibrary_book_sety" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="copies⊆copies_in_library" org.eventb.core.source="/FIT5138Assignment3/BasicLibrary.bum|org.eventb.core.machineFile#BasicLibrary|org.eventb.core.event#E|org.eventb.core.guard#("/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="copies⊈dom(copies_on_loan)" org.eventb.core.source="/FIT5138Assignment3/BasicLibrary.bum|org.eventb.core.machineFile#BasicLibrary|org.eventb.core.event#E|org.eventb.core.guard#)"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="copies⊈dom(request_hold)" org.eventb.core.source="/FIT5138Assignment3/LibraryRequestSystem.bum|org.eventb.core.machineFile#LibraryRequestSystem|org.eventb.core.event#;|org.eventb.core.guard#("/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/FIT5138Assignment3/LibraryRequestSystem.bpo|org.eventb.core.poFile#LibraryRequestSystem|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="1">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="request∈BOOK ∖ books_in_library ⇸ registered_users" org.eventb.core.source="/FIT5138Assignment3/LibraryRequestSystem.bum|org.eventb.core.machineFile#LibraryRequestSystem|org.eventb.core.invariant#2"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="request_hold∈copies_on_shelf ⤖ registered_users" org.eventb.core.source="/FIT5138Assignment3/LibraryRequestSystem.bum|org.eventb.core.machineFile#LibraryRequestSystem|org.eventb.core.invariant#8"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="notify⊆notification" org.eventb.core.source="/FIT5138Assignment3/LibraryRequestSystem.bum|org.eventb.core.machineFile#LibraryRequestSystem|org.eventb.core.invariant#:"/>
+</org.eventb.core.poPredicateSet>
+</org.eventb.core.poFile>

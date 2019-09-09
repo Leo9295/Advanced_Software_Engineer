@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.psFile>
+<org.eventb.core.psStatus name="INITIALISATION/inv1/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="1" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="INITIALISATION/inv2/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="1" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="INITIALISATION/inv3/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="1" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="RequestNewBook/grd4/WD" org.eventb.core.confidence="0" org.eventb.core.poStamp="1" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="RequestNewBook/inv1/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="1" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="RequestNewBook/inv3/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="1" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="AddRequestBook/inv1/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="1" org.eventb.core.psBroken="true" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="AddRequestBook/inv2/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="1" org.eventb.core.psBroken="true" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="AddRequestBook/inv3/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="1" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="RequestPickup/inv2/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="1" org.eventb.core.psBroken="true" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="RequestPickup/inv3/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="1" org.eventb.core.psBroken="true" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="UserDegisteredWithRequest/inv1/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="1" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="UserDegisteredWithRequest/inv2/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="1" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="RemoveRequestHoldCopies/inv2/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="1" org.eventb.core.psManual="false"/>
+</org.eventb.core.psFile>

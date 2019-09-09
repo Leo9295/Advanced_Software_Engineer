@@ -1,0 +1,1366 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.prFile version="1">
+<org.eventb.core.prProof name="INITIALISATION/act1/SIM" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="" org.eventb.core.prSets="USER">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p1">
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p1" org.eventb.core.prHyps=""/>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="(∅ ⦂ ℙ(USER))=(∅ ⦂ ℙ(USER))"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="⊤"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="INITIALISATION/inv1/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="" org.eventb.core.prSets="BOOK,USER">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p1">
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p1" org.eventb.core.prHyps=""/>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="⊤"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="(∅ ⦂ ℙ(BOOK×USER))∈(∅ ⦂ ℙ(BOOK)) ↔ (∅ ⦂ ℙ(USER))"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="INITIALISATION/inv2/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="" org.eventb.core.prSets="BOOK">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p1">
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p1" org.eventb.core.prHyps=""/>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="⊤"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="(∅ ⦂ ℙ(BOOK))⊆(∅ ⦂ ℙ(BOOK))"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="INITIALISATION/inv3/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="" org.eventb.core.prSets="BOOK,USER">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p1">
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p1" org.eventb.core.prHyps=""/>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="⊤"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="(∅ ⦂ ℙ(BOOK))=dom(∅ ⦂ ℙ(BOOK×USER))"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="inv5/THM" org.eventb.core.confidence="0" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1" org.eventb.core.prSets="BOOK,COPY,USER">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p2"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p3"/>
+<org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p4"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="eh with hold_books=dom(holds)" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p7">
+<org.eventb.core.prHypAction name="FORWARD_INF0" org.eventb.core.prHyps="p5" org.eventb.core.prInfHyps="p6"/>
+<org.eventb.core.prHypAction name="DESELECT1" org.eventb.core.prHyps="p5"/>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="hold_books" org.eventb.core.type="ℙ(BOOK)"/>
+<org.eventb.core.prIdent name="hold_related_copies" org.eventb.core.type="ℙ(COPY×USER)"/>
+<org.eventb.core.prIdent name="holds" org.eventb.core.type="ℙ(BOOK×USER)"/>
+<org.eventb.core.prIdent name="library_book_sets" org.eventb.core.type="ℙ(COPY×BOOK)"/>
+<org.eventb.core.prIdent name="registered_users" org.eventb.core.type="ℙ(USER)"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="hold_related_copies∈dom(library_book_sets ▷ hold_books) ⇸ registered_users"/>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="hold_related_copies∈dom(library_book_sets ▷ dom(holds)) ⇸ registered_users"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="registered_users⊆USER"/>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="copies_in_library⊆COPY">
+<org.eventb.core.prIdent name="copies_in_library" org.eventb.core.type="ℙ(COPY)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="hold_books⊆books_in_library">
+<org.eventb.core.prIdent name="books_in_library" org.eventb.core.type="ℙ(BOOK)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="dom(holds)⊆books_in_library">
+<org.eventb.core.prIdent name="books_in_library" org.eventb.core.type="ℙ(BOOK)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="books_in_library⊆BOOK">
+<org.eventb.core.prIdent name="books_in_library" org.eventb.core.type="ℙ(BOOK)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="hold_books=dom(holds)"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.eq:1"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="INITIALISATION/inv4/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="" org.eventb.core.prSets="BOOK,COPY,USER">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p1">
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p1" org.eventb.core.prHyps=""/>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="⊤"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="(∅ ⦂ ℙ(COPY×USER))∈dom((∅ ⦂ ℙ(COPY×BOOK)) ▷ (∅ ⦂ ℙ(BOOK))) ↔ (∅ ⦂ ℙ(USER))"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="INITIALISATION/inv6/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="" org.eventb.core.prSets="COPY,USER">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p1">
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p1" org.eventb.core.prHyps=""/>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="⊤"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="(∅ ⦂ ℙ(COPY×USER))∩(∅ ⦂ ℙ(COPY×USER))=(∅ ⦂ ℙ(COPY×USER))"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="Hold/grd5/THM" org.eventb.core.confidence="0" org.eventb.core.prFresh="" org.eventb.core.prHyps="">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p0" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p1"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p2"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p3"/>
+<org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p4"/>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="registered_users⊆USER">
+<org.eventb.core.prIdent name="USER" org.eventb.core.type="ℙ(USER)"/>
+<org.eventb.core.prIdent name="registered_users" org.eventb.core.type="ℙ(USER)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="copies_in_library⊆COPY">
+<org.eventb.core.prIdent name="COPY" org.eventb.core.type="ℙ(COPY)"/>
+<org.eventb.core.prIdent name="copies_in_library" org.eventb.core.type="ℙ(COPY)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="¬book ↦ user∈holds">
+<org.eventb.core.prIdent name="BOOK" org.eventb.core.type="ℙ(BOOK)"/>
+<org.eventb.core.prIdent name="USER" org.eventb.core.type="ℙ(USER)"/>
+<org.eventb.core.prIdent name="book" org.eventb.core.type="BOOK"/>
+<org.eventb.core.prIdent name="holds" org.eventb.core.type="ℙ(BOOK×USER)"/>
+<org.eventb.core.prIdent name="user" org.eventb.core.type="USER"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="books_in_library⊆BOOK">
+<org.eventb.core.prIdent name="BOOK" org.eventb.core.type="ℙ(BOOK)"/>
+<org.eventb.core.prIdent name="books_in_library" org.eventb.core.type="ℙ(BOOK)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="book ↦ user∉holds">
+<org.eventb.core.prIdent name="BOOK" org.eventb.core.type="ℙ(BOOK)"/>
+<org.eventb.core.prIdent name="USER" org.eventb.core.type="ℙ(USER)"/>
+<org.eventb.core.prIdent name="book" org.eventb.core.type="BOOK"/>
+<org.eventb.core.prIdent name="holds" org.eventb.core.type="ℙ(BOOK×USER)"/>
+<org.eventb.core.prIdent name="user" org.eventb.core.type="USER"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="Hold/grd6/THM" org.eventb.core.confidence="0" org.eventb.core.prFresh="" org.eventb.core.prHyps="">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p0" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p1"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p2"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p3"/>
+<org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p4"/>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="registered_users⊆USER">
+<org.eventb.core.prIdent name="USER" org.eventb.core.type="ℙ(USER)"/>
+<org.eventb.core.prIdent name="registered_users" org.eventb.core.type="ℙ(USER)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="copies_in_library⊆COPY">
+<org.eventb.core.prIdent name="COPY" org.eventb.core.type="ℙ(COPY)"/>
+<org.eventb.core.prIdent name="copies_in_library" org.eventb.core.type="ℙ(COPY)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="¬book ↦ user∈holds">
+<org.eventb.core.prIdent name="BOOK" org.eventb.core.type="ℙ(BOOK)"/>
+<org.eventb.core.prIdent name="USER" org.eventb.core.type="ℙ(USER)"/>
+<org.eventb.core.prIdent name="book" org.eventb.core.type="BOOK"/>
+<org.eventb.core.prIdent name="holds" org.eventb.core.type="ℙ(BOOK×USER)"/>
+<org.eventb.core.prIdent name="user" org.eventb.core.type="USER"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="books_in_library⊆BOOK">
+<org.eventb.core.prIdent name="BOOK" org.eventb.core.type="ℙ(BOOK)"/>
+<org.eventb.core.prIdent name="books_in_library" org.eventb.core.type="ℙ(BOOK)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="book ↦ user∉holds">
+<org.eventb.core.prIdent name="BOOK" org.eventb.core.type="ℙ(BOOK)"/>
+<org.eventb.core.prIdent name="USER" org.eventb.core.type="ℙ(USER)"/>
+<org.eventb.core.prIdent name="book" org.eventb.core.type="BOOK"/>
+<org.eventb.core.prIdent name="holds" org.eventb.core.type="ℙ(BOOK×USER)"/>
+<org.eventb.core.prIdent name="user" org.eventb.core.type="USER"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="Hold/inv1/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8" org.eventb.core.prSets="BOOK,COPY,USER">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p5" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p9"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p10"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p11"/>
+<org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p12"/>
+<org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p13"/>
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="PP" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p6,p3,p4,p7,p1,p2,p8,p9">
+<org.eventb.core.prString name=".arg" org.eventb.core.prSValue="R500"/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="book" org.eventb.core.type="BOOK"/>
+<org.eventb.core.prIdent name="books_in_library" org.eventb.core.type="ℙ(BOOK)"/>
+<org.eventb.core.prIdent name="copies_on_loan" org.eventb.core.type="ℙ(COPY×USER)"/>
+<org.eventb.core.prIdent name="holds" org.eventb.core.type="ℙ(BOOK×USER)"/>
+<org.eventb.core.prIdent name="library_book_sets" org.eventb.core.type="ℙ(COPY×BOOK)"/>
+<org.eventb.core.prIdent name="registered_users" org.eventb.core.type="ℙ(USER)"/>
+<org.eventb.core.prIdent name="related_copies" org.eventb.core.type="ℙ(COPY×USER)"/>
+<org.eventb.core.prIdent name="user" org.eventb.core.type="USER"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="holds∪{book ↦ user}∈books_in_library ↔ registered_users"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="dom(library_book_sets ▷ {book})⊆dom(copies_on_loan)"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="book∈books_in_library"/>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="user∈registered_users"/>
+<org.eventb.core.prPred name="p11" org.eventb.core.predicate="books_in_library⊆BOOK"/>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="book ↦ user∉holds"/>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="holds∈books_in_library ↔ registered_users"/>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="card(holds ▷ {user})∈0 ‥ 2"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="related_copies∩copies_on_loan=(∅ ⦂ ℙ(COPY×USER))"/>
+<org.eventb.core.prPred name="p10" org.eventb.core.predicate="registered_users⊆USER"/>
+<org.eventb.core.prPred name="p12" org.eventb.core.predicate="copies_in_library⊆COPY">
+<org.eventb.core.prIdent name="copies_in_library" org.eventb.core.type="ℙ(COPY)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p13" org.eventb.core.predicate="hold_pickup_notification⊆NOTIFICATION">
+<org.eventb.core.prIdent name="NOTIFICATION" org.eventb.core.type="ℙ(NOTIFICATION)"/>
+<org.eventb.core.prIdent name="hold_pickup_notification" org.eventb.core.type="ℙ(NOTIFICATION)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="¬book ↦ user∈holds"/>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="related_copies∈dom(library_book_sets ▷ {book}) → {user}"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+<org.eventb.core.prReas name="r2" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalPP:1"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="Hold/inv3/INV" org.eventb.core.confidence="0" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1" org.eventb.core.prSets="BOOK,USER">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p2" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p3"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p4"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p5"/>
+<org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p6"/>
+<org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p7"/>
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="eh with hold_books=dom(holds)" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p8"/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="book" org.eventb.core.type="BOOK"/>
+<org.eventb.core.prIdent name="hold_books" org.eventb.core.type="ℙ(BOOK)"/>
+<org.eventb.core.prIdent name="holds" org.eventb.core.type="ℙ(BOOK×USER)"/>
+<org.eventb.core.prIdent name="user" org.eventb.core.type="USER"/>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="registered_users⊆USER">
+<org.eventb.core.prIdent name="registered_users" org.eventb.core.type="ℙ(USER)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="copies_in_library⊆COPY">
+<org.eventb.core.prIdent name="COPY" org.eventb.core.type="ℙ(COPY)"/>
+<org.eventb.core.prIdent name="copies_in_library" org.eventb.core.type="ℙ(COPY)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="hold_books=dom(holds∪{book ↦ user})"/>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="dom(holds)=dom(holds∪{book ↦ user})"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="¬book ↦ user∈holds"/>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="books_in_library⊆BOOK">
+<org.eventb.core.prIdent name="books_in_library" org.eventb.core.type="ℙ(BOOK)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="book ↦ user∉holds"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="hold_books=dom(holds)"/>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="notification∈BOOK ↔ USER">
+<org.eventb.core.prIdent name="notification" org.eventb.core.type="ℙ(BOOK×USER)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.eq:1"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="Hold/inv6/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8" org.eventb.core.prSets="BOOK,COPY,USER">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p5" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p9"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p10"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p11"/>
+<org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p12"/>
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="PP" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p6,p3,p4,p7,p1,p2,p8,p9">
+<org.eventb.core.prString name=".arg" org.eventb.core.prSValue="R500"/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="book" org.eventb.core.type="BOOK"/>
+<org.eventb.core.prIdent name="books_in_library" org.eventb.core.type="ℙ(BOOK)"/>
+<org.eventb.core.prIdent name="copies_on_loan" org.eventb.core.type="ℙ(COPY×USER)"/>
+<org.eventb.core.prIdent name="hold_related_copies" org.eventb.core.type="ℙ(COPY×USER)"/>
+<org.eventb.core.prIdent name="holds" org.eventb.core.type="ℙ(BOOK×USER)"/>
+<org.eventb.core.prIdent name="library_book_sets" org.eventb.core.type="ℙ(COPY×BOOK)"/>
+<org.eventb.core.prIdent name="registered_users" org.eventb.core.type="ℙ(USER)"/>
+<org.eventb.core.prIdent name="related_copies" org.eventb.core.type="ℙ(COPY×USER)"/>
+<org.eventb.core.prIdent name="user" org.eventb.core.type="USER"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="dom(library_book_sets ▷ {book})⊆dom(copies_on_loan)"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="book∈books_in_library"/>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="user∈registered_users"/>
+<org.eventb.core.prPred name="p11" org.eventb.core.predicate="books_in_library⊆BOOK"/>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="book ↦ user∉holds"/>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="hold_related_copies∩copies_on_loan=(∅ ⦂ ℙ(COPY×USER))"/>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="card(holds ▷ {user})∈0 ‥ 2"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="(hold_related_copies∪related_copies)∩copies_on_loan=(∅ ⦂ ℙ(COPY×USER))"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="related_copies∩copies_on_loan=(∅ ⦂ ℙ(COPY×USER))"/>
+<org.eventb.core.prPred name="p10" org.eventb.core.predicate="registered_users⊆USER"/>
+<org.eventb.core.prPred name="p12" org.eventb.core.predicate="copies_in_library⊆COPY">
+<org.eventb.core.prIdent name="copies_in_library" org.eventb.core.type="ℙ(COPY)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="¬book ↦ user∈holds"/>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="related_copies∈dom(library_book_sets ▷ {book}) → {user}"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+<org.eventb.core.prReas name="r2" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalPP:1"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="Hold/copies_on_loan/EQL" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="" org.eventb.core.prSets="COPY,USER">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p1">
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p1" org.eventb.core.prHyps=""/>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="copies_on_loan" org.eventb.core.type="ℙ(COPY×USER)"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="⊤"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="copies_on_loan=copies_on_loan"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="Hold/copies_on_shelf/EQL" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="" org.eventb.core.prSets="COPY">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p1">
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p1" org.eventb.core.prHyps=""/>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="copies_on_shelf" org.eventb.core.type="ℙ(COPY)"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="⊤"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="copies_on_shelf=copies_on_shelf"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="HoldPickup/inv6/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7" org.eventb.core.prSets="BOOK,COPY,USER">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p8">
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p9"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p10"/>
+<org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p11"/>
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="PP" org.eventb.core.prGoal="p8" org.eventb.core.prHyps="p5,p2,p1,p4,p6,p7,p3">
+<org.eventb.core.prString name=".arg" org.eventb.core.prSValue="R500"/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="copies_on_loan" org.eventb.core.type="ℙ(COPY×USER)"/>
+<org.eventb.core.prIdent name="copies_on_shelf" org.eventb.core.type="ℙ(COPY)"/>
+<org.eventb.core.prIdent name="copy" org.eventb.core.type="COPY"/>
+<org.eventb.core.prIdent name="hold_related_copies" org.eventb.core.type="ℙ(COPY×USER)"/>
+<org.eventb.core.prIdent name="library_book_sets" org.eventb.core.type="ℙ(COPY×BOOK)"/>
+<org.eventb.core.prIdent name="registered_users" org.eventb.core.type="ℙ(USER)"/>
+<org.eventb.core.prIdent name="related_book" org.eventb.core.type="BOOK"/>
+<org.eventb.core.prIdent name="related_copies" org.eventb.core.type="ℙ(COPY×USER)"/>
+<org.eventb.core.prIdent name="user" org.eventb.core.type="USER"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="copy∈copies_on_shelf"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="user∈registered_users"/>
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="registered_users⊆USER"/>
+<org.eventb.core.prPred name="p11" org.eventb.core.predicate="copies_in_library⊆COPY">
+<org.eventb.core.prIdent name="copies_in_library" org.eventb.core.type="ℙ(COPY)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="related_copies∈dom(library_book_sets ▷ {related_book}) → {user}"/>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="card(copies_on_loan ▷ {user})∈0 ‥ 4"/>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="hold_related_copies∩(copies_on_loan∪{copy ↦ user})⊆related_copies"/>
+<org.eventb.core.prPred name="p10" org.eventb.core.predicate="books_in_library⊆BOOK">
+<org.eventb.core.prIdent name="books_in_library" org.eventb.core.type="ℙ(BOOK)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="(hold_related_copies ∖ related_copies)∩(copies_on_loan∪{copy ↦ user})=(∅ ⦂ ℙ(COPY×USER))"/>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="hold_related_copies∩copies_on_loan=(∅ ⦂ ℙ(COPY×USER))"/>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="copy ↦ user∈hold_related_copies"/>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="related_book∈ran({copy} ◁ library_book_sets)"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+<org.eventb.core.prReas name="r2" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalPP:1"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="evt1/inv6/INV" org.eventb.core.confidence="0" org.eventb.core.prFresh="" org.eventb.core.prHyps="">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p0"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p1"/>
+<org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p2"/>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="registered_users⊆USER">
+<org.eventb.core.prIdent name="USER" org.eventb.core.type="ℙ(USER)"/>
+<org.eventb.core.prIdent name="registered_users" org.eventb.core.type="ℙ(USER)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="copies_in_library⊆COPY">
+<org.eventb.core.prIdent name="COPY" org.eventb.core.type="ℙ(COPY)"/>
+<org.eventb.core.prIdent name="copies_in_library" org.eventb.core.type="ℙ(COPY)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="books_in_library⊆BOOK">
+<org.eventb.core.prIdent name="BOOK" org.eventb.core.type="ℙ(BOOK)"/>
+<org.eventb.core.prIdent name="books_in_library" org.eventb.core.type="ℙ(BOOK)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="HoldPickUp/inv6/INV" org.eventb.core.confidence="0" org.eventb.core.prFresh="" org.eventb.core.prHyps="">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p0"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p1"/>
+<org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p2"/>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="registered_users⊆USER">
+<org.eventb.core.prIdent name="USER" org.eventb.core.type="ℙ(USER)"/>
+<org.eventb.core.prIdent name="registered_users" org.eventb.core.type="ℙ(USER)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="copies_in_library⊆COPY">
+<org.eventb.core.prIdent name="COPY" org.eventb.core.type="ℙ(COPY)"/>
+<org.eventb.core.prIdent name="copies_in_library" org.eventb.core.type="ℙ(COPY)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="books_in_library⊆BOOK">
+<org.eventb.core.prIdent name="BOOK" org.eventb.core.type="ℙ(BOOK)"/>
+<org.eventb.core.prIdent name="books_in_library" org.eventb.core.type="ℙ(BOOK)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="HoldPickup/grd1/GRD" org.eventb.core.confidence="0" org.eventb.core.prFresh="" org.eventb.core.prHyps="">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p0"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p1"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p2"/>
+<org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p3"/>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="⊤"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="registered_users⊆USER">
+<org.eventb.core.prIdent name="USER" org.eventb.core.type="ℙ(USER)"/>
+<org.eventb.core.prIdent name="registered_users" org.eventb.core.type="ℙ(USER)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="copies_in_library⊆COPY">
+<org.eventb.core.prIdent name="COPY" org.eventb.core.type="ℙ(COPY)"/>
+<org.eventb.core.prIdent name="copies_in_library" org.eventb.core.type="ℙ(COPY)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="books_in_library⊆BOOK">
+<org.eventb.core.prIdent name="BOOK" org.eventb.core.type="ℙ(BOOK)"/>
+<org.eventb.core.prIdent name="books_in_library" org.eventb.core.type="ℙ(BOOK)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="HoldPickup/grd2/GRD" org.eventb.core.confidence="0" org.eventb.core.prFresh="" org.eventb.core.prHyps="">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p0"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p1"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p2"/>
+<org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p3"/>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="⊤"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="registered_users⊆USER">
+<org.eventb.core.prIdent name="USER" org.eventb.core.type="ℙ(USER)"/>
+<org.eventb.core.prIdent name="registered_users" org.eventb.core.type="ℙ(USER)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="copies_in_library⊆COPY">
+<org.eventb.core.prIdent name="COPY" org.eventb.core.type="ℙ(COPY)"/>
+<org.eventb.core.prIdent name="copies_in_library" org.eventb.core.type="ℙ(COPY)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="books_in_library⊆BOOK">
+<org.eventb.core.prIdent name="BOOK" org.eventb.core.type="ℙ(BOOK)"/>
+<org.eventb.core.prIdent name="books_in_library" org.eventb.core.type="ℙ(BOOK)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="HoldPickup/act1/SIM" org.eventb.core.confidence="0" org.eventb.core.prFresh="" org.eventb.core.prHyps="">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p0"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p1"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p2"/>
+<org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p3"/>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="⊤"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="registered_users⊆USER">
+<org.eventb.core.prIdent name="USER" org.eventb.core.type="ℙ(USER)"/>
+<org.eventb.core.prIdent name="registered_users" org.eventb.core.type="ℙ(USER)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="copies_in_library⊆COPY">
+<org.eventb.core.prIdent name="COPY" org.eventb.core.type="ℙ(COPY)"/>
+<org.eventb.core.prIdent name="copies_in_library" org.eventb.core.type="ℙ(COPY)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="books_in_library⊆BOOK">
+<org.eventb.core.prIdent name="BOOK" org.eventb.core.type="ℙ(BOOK)"/>
+<org.eventb.core.prIdent name="books_in_library" org.eventb.core.type="ℙ(BOOK)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="HoldPickup/act2/SIM" org.eventb.core.confidence="0" org.eventb.core.prFresh="" org.eventb.core.prHyps="">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p0"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p1"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p2"/>
+<org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p3"/>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="⊤"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="registered_users⊆USER">
+<org.eventb.core.prIdent name="USER" org.eventb.core.type="ℙ(USER)"/>
+<org.eventb.core.prIdent name="registered_users" org.eventb.core.type="ℙ(USER)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="copies_in_library⊆COPY">
+<org.eventb.core.prIdent name="COPY" org.eventb.core.type="ℙ(COPY)"/>
+<org.eventb.core.prIdent name="copies_in_library" org.eventb.core.type="ℙ(COPY)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="books_in_library⊆BOOK">
+<org.eventb.core.prIdent name="BOOK" org.eventb.core.type="ℙ(BOOK)"/>
+<org.eventb.core.prIdent name="books_in_library" org.eventb.core.type="ℙ(BOOK)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="HoldPickup/grd3/THM" org.eventb.core.confidence="0" org.eventb.core.prFresh="" org.eventb.core.prHyps="">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p0"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p1"/>
+<org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p2"/>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="registered_users⊆USER">
+<org.eventb.core.prIdent name="USER" org.eventb.core.type="ℙ(USER)"/>
+<org.eventb.core.prIdent name="registered_users" org.eventb.core.type="ℙ(USER)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="copies_in_library⊆COPY">
+<org.eventb.core.prIdent name="COPY" org.eventb.core.type="ℙ(COPY)"/>
+<org.eventb.core.prIdent name="copies_in_library" org.eventb.core.type="ℙ(COPY)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="books_in_library⊆BOOK">
+<org.eventb.core.prIdent name="BOOK" org.eventb.core.type="ℙ(BOOK)"/>
+<org.eventb.core.prIdent name="books_in_library" org.eventb.core.type="ℙ(BOOK)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="HoldPickup/inv1/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7" org.eventb.core.prSets="BOOK,COPY,USER">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p8"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p9"/>
+<org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p10"/>
+<org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p11"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="PP" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p5,p2,p1,p4,p6,p7,p3">
+<org.eventb.core.prString name=".arg" org.eventb.core.prSValue="R500"/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="books_in_library" org.eventb.core.type="ℙ(BOOK)"/>
+<org.eventb.core.prIdent name="copies_on_loan" org.eventb.core.type="ℙ(COPY×USER)"/>
+<org.eventb.core.prIdent name="copies_on_shelf" org.eventb.core.type="ℙ(COPY)"/>
+<org.eventb.core.prIdent name="copy" org.eventb.core.type="COPY"/>
+<org.eventb.core.prIdent name="hold_related_copies" org.eventb.core.type="ℙ(COPY×USER)"/>
+<org.eventb.core.prIdent name="holds" org.eventb.core.type="ℙ(BOOK×USER)"/>
+<org.eventb.core.prIdent name="library_book_sets" org.eventb.core.type="ℙ(COPY×BOOK)"/>
+<org.eventb.core.prIdent name="registered_users" org.eventb.core.type="ℙ(USER)"/>
+<org.eventb.core.prIdent name="related_book" org.eventb.core.type="BOOK"/>
+<org.eventb.core.prIdent name="related_copies" org.eventb.core.type="ℙ(COPY×USER)"/>
+<org.eventb.core.prIdent name="user" org.eventb.core.type="USER"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="copy∈copies_on_shelf"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="user∈registered_users"/>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="registered_users⊆USER"/>
+<org.eventb.core.prPred name="p10" org.eventb.core.predicate="copies_in_library⊆COPY">
+<org.eventb.core.prIdent name="copies_in_library" org.eventb.core.type="ℙ(COPY)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="related_copies∈dom(library_book_sets ▷ {related_book}) → {user}"/>
+<org.eventb.core.prPred name="p11" org.eventb.core.predicate="hold_pickup_notification⊆NOTIFICATION">
+<org.eventb.core.prIdent name="NOTIFICATION" org.eventb.core.type="ℙ(NOTIFICATION)"/>
+<org.eventb.core.prIdent name="hold_pickup_notification" org.eventb.core.type="ℙ(NOTIFICATION)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="card(copies_on_loan ▷ {user})∈0 ‥ 4"/>
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="books_in_library⊆BOOK"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="holds ∖ {related_book ↦ user}∈books_in_library ↔ registered_users"/>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="holds∈books_in_library ↔ registered_users"/>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="copy ↦ user∈hold_related_copies"/>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="related_book∈ran({copy} ◁ library_book_sets)"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalPP:1"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="HoldPickup/inv3/INV" org.eventb.core.confidence="0" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1" org.eventb.core.prSets="BOOK,USER">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p2"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p3"/>
+<org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p4"/>
+<org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p5"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="eh with hold_books=dom(holds)" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p6"/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="hold_books" org.eventb.core.type="ℙ(BOOK)"/>
+<org.eventb.core.prIdent name="holds" org.eventb.core.type="ℙ(BOOK×USER)"/>
+<org.eventb.core.prIdent name="related_book" org.eventb.core.type="BOOK"/>
+<org.eventb.core.prIdent name="user" org.eventb.core.type="USER"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="registered_users⊆USER">
+<org.eventb.core.prIdent name="registered_users" org.eventb.core.type="ℙ(USER)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="copies_in_library⊆COPY">
+<org.eventb.core.prIdent name="COPY" org.eventb.core.type="ℙ(COPY)"/>
+<org.eventb.core.prIdent name="copies_in_library" org.eventb.core.type="ℙ(COPY)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="dom(holds)=dom(holds ∖ {related_book ↦ user})"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="hold_books=dom(holds ∖ {related_book ↦ user})"/>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="books_in_library⊆BOOK">
+<org.eventb.core.prIdent name="books_in_library" org.eventb.core.type="ℙ(BOOK)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="hold_books=dom(holds)"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="notification∈BOOK ↔ USER">
+<org.eventb.core.prIdent name="notification" org.eventb.core.type="ℙ(BOOK×USER)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.eq:1"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="INITIALISATION/inv7/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="" org.eventb.core.prSets="NOTIFICATION,USER">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p1">
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p1" org.eventb.core.prHyps=""/>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="⊤"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="(∅ ⦂ ℙ(USER×NOTIFICATION))∈(∅ ⦂ ℙ(USER)) ↔ (∅ ⦂ ℙ(NOTIFICATION))"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="Hold/inv7/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8,p9" org.eventb.core.prSets="BOOK,COPY,NOTIFICATION,USER">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(NOTIFICATION,{send_hold_message},{send_request_message}))" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p5" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p10,p11"/>
+<org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p10,p11"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p6" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p12"/>
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p13"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p14"/>
+<org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p15"/>
+<org.eventb.core.prRule name="r3" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="PP" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p9,p3,p4,p7,p1,p2,p8,p10,p11,p12">
+<org.eventb.core.prString name=".arg" org.eventb.core.prSValue="R500"/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="book" org.eventb.core.type="BOOK"/>
+<org.eventb.core.prIdent name="books_in_library" org.eventb.core.type="ℙ(BOOK)"/>
+<org.eventb.core.prIdent name="copies_on_loan" org.eventb.core.type="ℙ(COPY×USER)"/>
+<org.eventb.core.prIdent name="hold_pickup_notification" org.eventb.core.type="ℙ(USER×NOTIFICATION)"/>
+<org.eventb.core.prIdent name="holds" org.eventb.core.type="ℙ(BOOK×USER)"/>
+<org.eventb.core.prIdent name="library_book_sets" org.eventb.core.type="ℙ(COPY×BOOK)"/>
+<org.eventb.core.prIdent name="registered_users" org.eventb.core.type="ℙ(USER)"/>
+<org.eventb.core.prIdent name="related_copies" org.eventb.core.type="ℙ(COPY×USER)"/>
+<org.eventb.core.prIdent name="send_hold_message" org.eventb.core.type="NOTIFICATION"/>
+<org.eventb.core.prIdent name="send_request_message" org.eventb.core.type="NOTIFICATION"/>
+<org.eventb.core.prIdent name="user" org.eventb.core.type="USER"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="dom(library_book_sets ▷ {book})⊆dom(copies_on_loan)"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="book∈books_in_library"/>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="user∈registered_users"/>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="partition(NOTIFICATION,{send_hold_message},{send_request_message})"/>
+<org.eventb.core.prPred name="p11" org.eventb.core.predicate="¬send_hold_message=send_request_message"/>
+<org.eventb.core.prPred name="p14" org.eventb.core.predicate="books_in_library⊆BOOK"/>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="book ↦ user∉holds"/>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="card(holds ▷ {user})∈0 ‥ 2"/>
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="hold_pickup_notification∈registered_users ⇸ {send_hold_message}"/>
+<org.eventb.core.prPred name="p10" org.eventb.core.predicate="NOTIFICATION={send_hold_message,send_request_message}"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="related_copies∩copies_on_loan=(∅ ⦂ ℙ(COPY×USER))"/>
+<org.eventb.core.prPred name="p13" org.eventb.core.predicate="registered_users⊆USER"/>
+<org.eventb.core.prPred name="p15" org.eventb.core.predicate="copies_in_library⊆COPY">
+<org.eventb.core.prIdent name="copies_in_library" org.eventb.core.type="ℙ(COPY)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p12" org.eventb.core.predicate="¬book ↦ user∈holds"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="hold_pickup_notification∪{user ↦ send_hold_message}∈registered_users ⇸ {send_hold_message}"/>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="related_copies∈dom(library_book_sets ▷ {book}) → {user}"/>
+<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+<org.eventb.core.prReas name="r3" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalPP:1"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="HoldPickup/inv7/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8" org.eventb.core.prSets="BOOK,COPY,NOTIFICATION,USER">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(NOTIFICATION,{send_hold_message},{send_request_message}))" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p4" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p9,p10"/>
+<org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p9,p10"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p11"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p12"/>
+<org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p13"/>
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="PP" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p6,p2,p1,p5,p7,p8,p3,p9,p10">
+<org.eventb.core.prString name=".arg" org.eventb.core.prSValue="R500"/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="copies_on_loan" org.eventb.core.type="ℙ(COPY×USER)"/>
+<org.eventb.core.prIdent name="copies_on_shelf" org.eventb.core.type="ℙ(COPY)"/>
+<org.eventb.core.prIdent name="copy" org.eventb.core.type="COPY"/>
+<org.eventb.core.prIdent name="hold_pickup_notification" org.eventb.core.type="ℙ(USER×NOTIFICATION)"/>
+<org.eventb.core.prIdent name="hold_related_copies" org.eventb.core.type="ℙ(COPY×USER)"/>
+<org.eventb.core.prIdent name="library_book_sets" org.eventb.core.type="ℙ(COPY×BOOK)"/>
+<org.eventb.core.prIdent name="registered_users" org.eventb.core.type="ℙ(USER)"/>
+<org.eventb.core.prIdent name="related_book" org.eventb.core.type="BOOK"/>
+<org.eventb.core.prIdent name="related_copies" org.eventb.core.type="ℙ(COPY×USER)"/>
+<org.eventb.core.prIdent name="send_hold_message" org.eventb.core.type="NOTIFICATION"/>
+<org.eventb.core.prIdent name="send_request_message" org.eventb.core.type="NOTIFICATION"/>
+<org.eventb.core.prIdent name="user" org.eventb.core.type="USER"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="hold_pickup_notification ∖ {user ↦ send_hold_message}∈registered_users ⇸ {send_hold_message}"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="user∈registered_users"/>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="partition(NOTIFICATION,{send_hold_message},{send_request_message})"/>
+<org.eventb.core.prPred name="p10" org.eventb.core.predicate="¬send_hold_message=send_request_message"/>
+<org.eventb.core.prPred name="p12" org.eventb.core.predicate="books_in_library⊆BOOK">
+<org.eventb.core.prIdent name="books_in_library" org.eventb.core.type="ℙ(BOOK)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="hold_pickup_notification∈registered_users ⇸ {send_hold_message}"/>
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="NOTIFICATION={send_hold_message,send_request_message}"/>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="related_book∈ran({copy} ◁ library_book_sets)"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="copy∈copies_on_shelf"/>
+<org.eventb.core.prPred name="p11" org.eventb.core.predicate="registered_users⊆USER"/>
+<org.eventb.core.prPred name="p13" org.eventb.core.predicate="copies_in_library⊆COPY">
+<org.eventb.core.prIdent name="copies_in_library" org.eventb.core.type="ℙ(COPY)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="related_copies∈dom(library_book_sets ▷ {related_book}) → {user}"/>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="card(copies_on_loan ▷ {user})∈0 ‥ 4"/>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="copy ↦ user∈hold_related_copies"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+<org.eventb.core.prReas name="r2" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalPP:1"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="Hold/grd7/WD" org.eventb.core.confidence="0" org.eventb.core.prFresh="" org.eventb.core.prHyps="">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p0" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p1"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p2"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p3"/>
+<org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p4"/>
+<org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p5"/>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="registered_users⊆USER">
+<org.eventb.core.prIdent name="USER" org.eventb.core.type="ℙ(USER)"/>
+<org.eventb.core.prIdent name="registered_users" org.eventb.core.type="ℙ(USER)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="copies_in_library⊆COPY">
+<org.eventb.core.prIdent name="COPY" org.eventb.core.type="ℙ(COPY)"/>
+<org.eventb.core.prIdent name="copies_in_library" org.eventb.core.type="ℙ(COPY)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="¬book ↦ user∈holds">
+<org.eventb.core.prIdent name="BOOK" org.eventb.core.type="ℙ(BOOK)"/>
+<org.eventb.core.prIdent name="USER" org.eventb.core.type="ℙ(USER)"/>
+<org.eventb.core.prIdent name="book" org.eventb.core.type="BOOK"/>
+<org.eventb.core.prIdent name="holds" org.eventb.core.type="ℙ(BOOK×USER)"/>
+<org.eventb.core.prIdent name="user" org.eventb.core.type="USER"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="books_in_library⊆BOOK">
+<org.eventb.core.prIdent name="BOOK" org.eventb.core.type="ℙ(BOOK)"/>
+<org.eventb.core.prIdent name="books_in_library" org.eventb.core.type="ℙ(BOOK)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="book ↦ user∉holds">
+<org.eventb.core.prIdent name="BOOK" org.eventb.core.type="ℙ(BOOK)"/>
+<org.eventb.core.prIdent name="USER" org.eventb.core.type="ℙ(USER)"/>
+<org.eventb.core.prIdent name="book" org.eventb.core.type="BOOK"/>
+<org.eventb.core.prIdent name="holds" org.eventb.core.type="ℙ(BOOK×USER)"/>
+<org.eventb.core.prIdent name="user" org.eventb.core.type="USER"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="notification∈BOOK ↔ USER">
+<org.eventb.core.prIdent name="BOOK" org.eventb.core.type="ℙ(BOOK)"/>
+<org.eventb.core.prIdent name="USER" org.eventb.core.type="ℙ(USER)"/>
+<org.eventb.core.prIdent name="notification" org.eventb.core.type="ℙ(BOOK×USER)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="INITIALISATION/inv5/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="" org.eventb.core.prSets="COPY,USER">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p1">
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p1" org.eventb.core.prHyps=""/>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="⊤"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="(∅ ⦂ ℙ(COPY×USER))∩(∅ ⦂ ℙ(COPY×USER))=(∅ ⦂ ℙ(COPY×USER))"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="Hold/inv5/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7,p8" org.eventb.core.prSets="BOOK,COPY,USER">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p5" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p9"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p10"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p11"/>
+<org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p12"/>
+<org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p13"/>
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="PP" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p6,p3,p4,p7,p1,p2,p8,p9">
+<org.eventb.core.prString name=".arg" org.eventb.core.prSValue="R500"/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="book" org.eventb.core.type="BOOK"/>
+<org.eventb.core.prIdent name="books_in_library" org.eventb.core.type="ℙ(BOOK)"/>
+<org.eventb.core.prIdent name="copies_on_loan" org.eventb.core.type="ℙ(COPY×USER)"/>
+<org.eventb.core.prIdent name="hold_related_copies" org.eventb.core.type="ℙ(COPY×USER)"/>
+<org.eventb.core.prIdent name="holds" org.eventb.core.type="ℙ(BOOK×USER)"/>
+<org.eventb.core.prIdent name="library_book_sets" org.eventb.core.type="ℙ(COPY×BOOK)"/>
+<org.eventb.core.prIdent name="registered_users" org.eventb.core.type="ℙ(USER)"/>
+<org.eventb.core.prIdent name="related_copies" org.eventb.core.type="ℙ(COPY×USER)"/>
+<org.eventb.core.prIdent name="user" org.eventb.core.type="USER"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="dom(library_book_sets ▷ {book})⊆dom(copies_on_loan)"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="book∈books_in_library"/>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="user∈registered_users"/>
+<org.eventb.core.prPred name="p12" org.eventb.core.predicate="books_in_library⊆BOOK"/>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="book ↦ user∉holds"/>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="hold_related_copies∩copies_on_loan=(∅ ⦂ ℙ(COPY×USER))"/>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="card(holds ▷ {user})∈0 ‥ 2"/>
+<org.eventb.core.prPred name="p10" org.eventb.core.predicate="notification∈BOOK ↔ USER">
+<org.eventb.core.prIdent name="notification" org.eventb.core.type="ℙ(BOOK×USER)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="(hold_related_copies∪related_copies)∩copies_on_loan=(∅ ⦂ ℙ(COPY×USER))"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="related_copies∩copies_on_loan=(∅ ⦂ ℙ(COPY×USER))"/>
+<org.eventb.core.prPred name="p11" org.eventb.core.predicate="registered_users⊆USER"/>
+<org.eventb.core.prPred name="p13" org.eventb.core.predicate="copies_in_library⊆COPY">
+<org.eventb.core.prIdent name="copies_in_library" org.eventb.core.type="ℙ(COPY)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="¬book ↦ user∈holds"/>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="related_copies∈dom(library_book_sets ▷ {book}) → {user}"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+<org.eventb.core.prReas name="r2" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalPP:1"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="HoldPickup/inv5/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7" org.eventb.core.prSets="BOOK,COPY,USER">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p8">
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p9"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p10"/>
+<org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p11"/>
+<org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p12"/>
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="PP" org.eventb.core.prGoal="p8" org.eventb.core.prHyps="p5,p2,p1,p4,p6,p7,p3">
+<org.eventb.core.prString name=".arg" org.eventb.core.prSValue="R500"/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="copies_on_loan" org.eventb.core.type="ℙ(COPY×USER)"/>
+<org.eventb.core.prIdent name="copies_on_shelf" org.eventb.core.type="ℙ(COPY)"/>
+<org.eventb.core.prIdent name="copy" org.eventb.core.type="COPY"/>
+<org.eventb.core.prIdent name="hold_related_copies" org.eventb.core.type="ℙ(COPY×USER)"/>
+<org.eventb.core.prIdent name="library_book_sets" org.eventb.core.type="ℙ(COPY×BOOK)"/>
+<org.eventb.core.prIdent name="registered_users" org.eventb.core.type="ℙ(USER)"/>
+<org.eventb.core.prIdent name="related_book" org.eventb.core.type="BOOK"/>
+<org.eventb.core.prIdent name="related_copies" org.eventb.core.type="ℙ(COPY×USER)"/>
+<org.eventb.core.prIdent name="user" org.eventb.core.type="USER"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="user∈registered_users"/>
+<org.eventb.core.prPred name="p11" org.eventb.core.predicate="books_in_library⊆BOOK">
+<org.eventb.core.prIdent name="books_in_library" org.eventb.core.type="ℙ(BOOK)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="hold_related_copies∩copies_on_loan=(∅ ⦂ ℙ(COPY×USER))"/>
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="notification∈BOOK ↔ USER">
+<org.eventb.core.prIdent name="notification" org.eventb.core.type="ℙ(BOOK×USER)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="related_book∈ran({copy} ◁ library_book_sets)"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="copy∈copies_on_shelf"/>
+<org.eventb.core.prPred name="p10" org.eventb.core.predicate="registered_users⊆USER"/>
+<org.eventb.core.prPred name="p12" org.eventb.core.predicate="copies_in_library⊆COPY">
+<org.eventb.core.prIdent name="copies_in_library" org.eventb.core.type="ℙ(COPY)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="related_copies∈dom(library_book_sets ▷ {related_book}) → {user}"/>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="card(copies_on_loan ▷ {user})∈0 ‥ 4"/>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="hold_related_copies∩(copies_on_loan∪{copy ↦ user})⊆related_copies"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="(hold_related_copies ∖ related_copies)∩(copies_on_loan∪{copy ↦ user})=(∅ ⦂ ℙ(COPY×USER))"/>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="copy ↦ user∈hold_related_copies"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+<org.eventb.core.prReas name="r2" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalPP:1"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="UserRederegisteredWithHold/inv1/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prHyps="p0" org.eventb.core.prSets="COPY,USER">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p0" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p1"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊥ hyp" org.eventb.core.prHyps="p1"/>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="copies_on_loan" org.eventb.core.type="ℙ(COPY×USER)"/>
+<org.eventb.core.prIdent name="user" org.eventb.core.type="USER"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="⊥"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="copies_on_loan ⇸ {user}=(∅ ⦂ ℙ(ℙ(COPY×USER×USER)))"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.falseHyp"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="UserRederegisteredWithHold/inv5/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prHyps="p0" org.eventb.core.prSets="COPY,USER">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p0" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p1"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊥ hyp" org.eventb.core.prHyps="p1"/>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="copies_on_loan" org.eventb.core.type="ℙ(COPY×USER)"/>
+<org.eventb.core.prIdent name="user" org.eventb.core.type="USER"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="⊥"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="copies_on_loan ⇸ {user}=(∅ ⦂ ℙ(ℙ(COPY×USER×USER)))"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.falseHyp"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="UserRederegisteredWithHold/grd1/GRD"/>
+<org.eventb.core.prProof name="UserRederegisteredWithHold/grd2/GRD"/>
+<org.eventb.core.prProof name="UserRederegisteredWithHold/act1/SIM"/>
+<org.eventb.core.prProof name="UserDeregisteredWithHold/inv1/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prHyps="p0" org.eventb.core.prSets="COPY,USER">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p0" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p1"/>
+<org.eventb.core.prHypAction name="REWRITE1" org.eventb.core.prHidden="p2" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p3"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊥ hyp" org.eventb.core.prHyps="p1"/>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="copies_on_loan" org.eventb.core.type="ℙ(COPY×USER)"/>
+<org.eventb.core.prIdent name="user" org.eventb.core.type="USER"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="¬user∈ran(holds)">
+<org.eventb.core.prIdent name="BOOK" org.eventb.core.type="ℙ(BOOK)"/>
+<org.eventb.core.prIdent name="holds" org.eventb.core.type="ℙ(BOOK×USER)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="user∉ran(holds)">
+<org.eventb.core.prIdent name="BOOK" org.eventb.core.type="ℙ(BOOK)"/>
+<org.eventb.core.prIdent name="holds" org.eventb.core.type="ℙ(BOOK×USER)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="⊥"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="copies_on_loan ⇸ {user}=(∅ ⦂ ℙ(ℙ(COPY×USER×USER)))"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.falseHyp"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="UserDeregisteredWithHold/inv5/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prHyps="p0" org.eventb.core.prSets="COPY,USER">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p0" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p1"/>
+<org.eventb.core.prHypAction name="REWRITE1" org.eventb.core.prHidden="p2" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p3"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊥ hyp" org.eventb.core.prHyps="p1"/>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="copies_on_loan" org.eventb.core.type="ℙ(COPY×USER)"/>
+<org.eventb.core.prIdent name="user" org.eventb.core.type="USER"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="¬user∈ran(holds)">
+<org.eventb.core.prIdent name="BOOK" org.eventb.core.type="ℙ(BOOK)"/>
+<org.eventb.core.prIdent name="holds" org.eventb.core.type="ℙ(BOOK×USER)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="user∉ran(holds)">
+<org.eventb.core.prIdent name="BOOK" org.eventb.core.type="ℙ(BOOK)"/>
+<org.eventb.core.prIdent name="holds" org.eventb.core.type="ℙ(BOOK×USER)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="⊥"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="copies_on_loan ⇸ {user}=(∅ ⦂ ℙ(ℙ(COPY×USER×USER)))"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.falseHyp"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="UserDeregisteredWithHold/inv7/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prHyps="p0" org.eventb.core.prSets="COPY,USER">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="Partition rewrites in hyp (partition(OPERATION,{send_message}))" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p1" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p2"/>
+<org.eventb.core.prHypAction name="SELECT1" org.eventb.core.prHyps="p2"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p0" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p3"/>
+<org.eventb.core.prHypAction name="REWRITE1" org.eventb.core.prHidden="p4" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p5"/>
+<org.eventb.core.prRule name="r2" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊥ hyp" org.eventb.core.prHyps="p3"/>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+<org.eventb.core.prString name=".pos" org.eventb.core.prSValue=""/>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="copies_on_loan" org.eventb.core.type="ℙ(COPY×USER)"/>
+<org.eventb.core.prIdent name="user" org.eventb.core.type="USER"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="partition(OPERATION,{send_message})">
+<org.eventb.core.prIdent name="OPERATION" org.eventb.core.type="ℙ(OPERATION)"/>
+<org.eventb.core.prIdent name="send_message" org.eventb.core.type="OPERATION"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="OPERATION={send_message}">
+<org.eventb.core.prIdent name="OPERATION" org.eventb.core.type="ℙ(OPERATION)"/>
+<org.eventb.core.prIdent name="send_message" org.eventb.core.type="OPERATION"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="¬user∈ran(holds)">
+<org.eventb.core.prIdent name="BOOK" org.eventb.core.type="ℙ(BOOK)"/>
+<org.eventb.core.prIdent name="holds" org.eventb.core.type="ℙ(BOOK×USER)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="user∉ran(holds)">
+<org.eventb.core.prIdent name="BOOK" org.eventb.core.type="ℙ(BOOK)"/>
+<org.eventb.core.prIdent name="holds" org.eventb.core.type="ℙ(BOOK×USER)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="⊥"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="copies_on_loan ⇸ {user}=(∅ ⦂ ℙ(ℙ(COPY×USER×USER)))"/>
+<org.eventb.core.prReas name="r2" org.eventb.core.prRID="org.eventb.core.seqprover.falseHyp"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.partitionRewrites"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="HoldCopyRetuen/inv6/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3" org.eventb.core.prSets="COPY,USER">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p4"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p5"/>
+<org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p6"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="PP" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p3,p1,p2">
+<org.eventb.core.prString name=".arg" org.eventb.core.prSValue="R500"/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="copies_on_loan" org.eventb.core.type="ℙ(COPY×USER)"/>
+<org.eventb.core.prIdent name="copy" org.eventb.core.type="COPY"/>
+<org.eventb.core.prIdent name="hold_related_copies" org.eventb.core.type="ℙ(COPY×USER)"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="copy∈dom(copies_on_loan)"/>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="registered_users⊆USER">
+<org.eventb.core.prIdent name="registered_users" org.eventb.core.type="ℙ(USER)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="copies_in_library⊆COPY">
+<org.eventb.core.prIdent name="copies_in_library" org.eventb.core.type="ℙ(COPY)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="copy∈dom(hold_related_copies)"/>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="books_in_library⊆BOOK">
+<org.eventb.core.prIdent name="BOOK" org.eventb.core.type="ℙ(BOOK)"/>
+<org.eventb.core.prIdent name="books_in_library" org.eventb.core.type="ℙ(BOOK)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="hold_related_copies∩copies_on_loan=(∅ ⦂ ℙ(COPY×USER))"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="hold_related_copies∩({copy} ⩤ copies_on_loan)=(∅ ⦂ ℙ(COPY×USER))"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalPP:1"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="HoldCopyReturn/inv6/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4" org.eventb.core.prSets="COPY,USER">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p5"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p6"/>
+<org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p7"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="PP" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p4,p1,p2,p3">
+<org.eventb.core.prString name=".arg" org.eventb.core.prSValue="R500"/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="copies_on_loan" org.eventb.core.type="ℙ(COPY×USER)"/>
+<org.eventb.core.prIdent name="copy" org.eventb.core.type="COPY"/>
+<org.eventb.core.prIdent name="hold_related_copies" org.eventb.core.type="ℙ(COPY×USER)"/>
+<org.eventb.core.prIdent name="hold_users" org.eventb.core.type="ℙ(COPY×USER)"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="copy∈dom(copies_on_loan)"/>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="registered_users⊆USER">
+<org.eventb.core.prIdent name="registered_users" org.eventb.core.type="ℙ(USER)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="copies_in_library⊆COPY">
+<org.eventb.core.prIdent name="copies_in_library" org.eventb.core.type="ℙ(COPY)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="copy∈dom(hold_related_copies)"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="hold_users⊆hold_related_copies"/>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="books_in_library⊆BOOK">
+<org.eventb.core.prIdent name="BOOK" org.eventb.core.type="ℙ(BOOK)"/>
+<org.eventb.core.prIdent name="books_in_library" org.eventb.core.type="ℙ(BOOK)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="hold_related_copies∩copies_on_loan=(∅ ⦂ ℙ(COPY×USER))"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="hold_related_copies∩({copy} ⩤ copies_on_loan)=(∅ ⦂ ℙ(COPY×USER))"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalPP:1"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="Hold/inv4/INV" org.eventb.core.confidence="0" org.eventb.core.prFresh="" org.eventb.core.prHyps="">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p0" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p1"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p2"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p3"/>
+<org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p4"/>
+<org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p5"/>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="registered_users⊆USER">
+<org.eventb.core.prIdent name="USER" org.eventb.core.type="ℙ(USER)"/>
+<org.eventb.core.prIdent name="registered_users" org.eventb.core.type="ℙ(USER)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="copies_in_library⊆COPY">
+<org.eventb.core.prIdent name="COPY" org.eventb.core.type="ℙ(COPY)"/>
+<org.eventb.core.prIdent name="copies_in_library" org.eventb.core.type="ℙ(COPY)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="¬book ↦ user∈holds">
+<org.eventb.core.prIdent name="BOOK" org.eventb.core.type="ℙ(BOOK)"/>
+<org.eventb.core.prIdent name="USER" org.eventb.core.type="ℙ(USER)"/>
+<org.eventb.core.prIdent name="book" org.eventb.core.type="BOOK"/>
+<org.eventb.core.prIdent name="holds" org.eventb.core.type="ℙ(BOOK×USER)"/>
+<org.eventb.core.prIdent name="user" org.eventb.core.type="USER"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="books_in_library⊆BOOK">
+<org.eventb.core.prIdent name="BOOK" org.eventb.core.type="ℙ(BOOK)"/>
+<org.eventb.core.prIdent name="books_in_library" org.eventb.core.type="ℙ(BOOK)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="book ↦ user∉holds">
+<org.eventb.core.prIdent name="BOOK" org.eventb.core.type="ℙ(BOOK)"/>
+<org.eventb.core.prIdent name="USER" org.eventb.core.type="ℙ(USER)"/>
+<org.eventb.core.prIdent name="book" org.eventb.core.type="BOOK"/>
+<org.eventb.core.prIdent name="holds" org.eventb.core.type="ℙ(BOOK×USER)"/>
+<org.eventb.core.prIdent name="user" org.eventb.core.type="USER"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="notification∈BOOK ↔ USER">
+<org.eventb.core.prIdent name="BOOK" org.eventb.core.type="ℙ(BOOK)"/>
+<org.eventb.core.prIdent name="USER" org.eventb.core.type="ℙ(USER)"/>
+<org.eventb.core.prIdent name="notification" org.eventb.core.type="ℙ(BOOK×USER)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="HoldPickup/inv4/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p1,p2,p3,p4,p5,p6,p7" org.eventb.core.prSets="BOOK,COPY,USER">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p8"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p9"/>
+<org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p10"/>
+<org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p11"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="PP" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="p5,p2,p1,p4,p6,p7,p3">
+<org.eventb.core.prString name=".arg" org.eventb.core.prSValue="R500"/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="copies_on_loan" org.eventb.core.type="ℙ(COPY×USER)"/>
+<org.eventb.core.prIdent name="copies_on_shelf" org.eventb.core.type="ℙ(COPY)"/>
+<org.eventb.core.prIdent name="copy" org.eventb.core.type="COPY"/>
+<org.eventb.core.prIdent name="hold_books" org.eventb.core.type="ℙ(BOOK)"/>
+<org.eventb.core.prIdent name="hold_related_copies" org.eventb.core.type="ℙ(COPY×USER)"/>
+<org.eventb.core.prIdent name="library_book_sets" org.eventb.core.type="ℙ(COPY×BOOK)"/>
+<org.eventb.core.prIdent name="registered_users" org.eventb.core.type="ℙ(USER)"/>
+<org.eventb.core.prIdent name="related_book" org.eventb.core.type="BOOK"/>
+<org.eventb.core.prIdent name="related_copies" org.eventb.core.type="ℙ(COPY×USER)"/>
+<org.eventb.core.prIdent name="user" org.eventb.core.type="USER"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="copy∈copies_on_shelf"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="user∈registered_users"/>
+<org.eventb.core.prPred name="p9" org.eventb.core.predicate="registered_users⊆USER"/>
+<org.eventb.core.prPred name="p11" org.eventb.core.predicate="copies_in_library⊆COPY">
+<org.eventb.core.prIdent name="copies_in_library" org.eventb.core.type="ℙ(COPY)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="related_copies∈dom(library_book_sets ▷ {related_book}) → {user}"/>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="card(copies_on_loan ▷ {user})∈0 ‥ 4"/>
+<org.eventb.core.prPred name="p10" org.eventb.core.predicate="books_in_library⊆BOOK">
+<org.eventb.core.prIdent name="books_in_library" org.eventb.core.type="ℙ(BOOK)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="hold_related_copies ∖ related_copies∈dom(library_book_sets ▷ hold_books) ↔ registered_users"/>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="hold_related_copies∈dom(library_book_sets ▷ hold_books) ↔ registered_users"/>
+<org.eventb.core.prPred name="p8" org.eventb.core.predicate="notification∈BOOK ↔ USER">
+<org.eventb.core.prIdent name="notification" org.eventb.core.type="ℙ(BOOK×USER)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="copy ↦ user∈hold_related_copies"/>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="related_book∈ran({copy} ◁ library_book_sets)"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="com.clearsy.atelierb.provers.core.externalPP:1"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="UserDeregisteredWithHold/inv4/INV" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prHyps="p0" org.eventb.core.prSets="COPY,USER">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p0" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p1"/>
+<org.eventb.core.prHypAction name="REWRITE1" org.eventb.core.prHidden="p2" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p3"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊥ hyp" org.eventb.core.prHyps="p1"/>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="copies_on_loan" org.eventb.core.type="ℙ(COPY×USER)"/>
+<org.eventb.core.prIdent name="user" org.eventb.core.type="USER"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="¬user∈ran(holds)">
+<org.eventb.core.prIdent name="BOOK" org.eventb.core.type="ℙ(BOOK)"/>
+<org.eventb.core.prIdent name="holds" org.eventb.core.type="ℙ(BOOK×USER)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="user∉ran(holds)">
+<org.eventb.core.prIdent name="BOOK" org.eventb.core.type="ℙ(BOOK)"/>
+<org.eventb.core.prIdent name="holds" org.eventb.core.type="ℙ(BOOK×USER)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="⊥"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="copies_on_loan ⇸ {user}=(∅ ⦂ ℙ(ℙ(COPY×USER×USER)))"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.falseHyp"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="INITIALISATION/act2/SIM" org.eventb.core.confidence="1000" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="" org.eventb.core.prSets="BOOK,COPY">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p1">
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="⊤ goal" org.eventb.core.prGoal="p1" org.eventb.core.prHyps=""/>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="(∅ ⦂ ℙ(BOOK))=(∅ ⦂ ℙ(BOOK))∧(∅ ⦂ ℙ(COPY×BOOK))=(∅ ⦂ ℙ(COPY×BOOK))"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="⊤"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.trueGoal"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="INITIALISATION/act3/SIM" org.eventb.core.confidence="0" org.eventb.core.prFresh="" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="" org.eventb.core.prSets="COPY,USER">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p1"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="∧ goal" org.eventb.core.prGoal="p0" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'" org.eventb.core.prGoal="p2"/>
+<org.eventb.core.prAnte name="(" org.eventb.core.prGoal="p3"/>
+<org.eventb.core.prAnte name=")" org.eventb.core.prGoal="p4"/>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+<org.eventb.core.prIdent name="copies_in_library'" org.eventb.core.type="ℙ(COPY)"/>
+<org.eventb.core.prIdent name="copies_on_loan'" org.eventb.core.type="ℙ(COPY×USER)"/>
+<org.eventb.core.prIdent name="copies_on_shelf'" org.eventb.core.type="ℙ(COPY)"/>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="copies_in_library'=(∅ ⦂ ℙ(COPY))"/>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="copies_in_library'=(∅ ⦂ ℙ(COPY))∧copies_on_shelf'=(∅ ⦂ ℙ(COPY))∧copies_on_loan'=(∅ ⦂ ℙ(COPY×USER))"/>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="copies_on_loan'=(∅ ⦂ ℙ(COPY×USER))"/>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="copies_on_shelf'=(∅ ⦂ ℙ(COPY))"/>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="notification∈BOOK ↔ USER">
+<org.eventb.core.prIdent name="BOOK" org.eventb.core.type="ℙ(BOOK)"/>
+<org.eventb.core.prIdent name="notification" org.eventb.core.type="ℙ(BOOK×USER)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.conj:0"/>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="RemoveHoldCopies/inv4/INV" org.eventb.core.confidence="0" org.eventb.core.prFresh="" org.eventb.core.prHyps="">
+<org.eventb.core.lang name="L"/>
+<org.eventb.core.prRule name="r0" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="simplification rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="REWRITE0" org.eventb.core.prHidden="p0" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p1"/>
+<org.eventb.core.prHypAction name="REWRITE1" org.eventb.core.prHidden="p2" org.eventb.core.prHyps="" org.eventb.core.prInfHyps="p3"/>
+<org.eventb.core.prRule name="r1" org.eventb.core.confidence="1000" org.eventb.core.prDisplay="type rewrites" org.eventb.core.prHyps="">
+<org.eventb.core.prAnte name="'">
+<org.eventb.core.prHypAction name="HIDE0" org.eventb.core.prHyps="p4"/>
+<org.eventb.core.prHypAction name="HIDE1" org.eventb.core.prHyps="p5"/>
+<org.eventb.core.prHypAction name="HIDE2" org.eventb.core.prHyps="p6"/>
+<org.eventb.core.prHypAction name="HIDE3" org.eventb.core.prHyps="p7"/>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+</org.eventb.core.prAnte>
+</org.eventb.core.prRule>
+<org.eventb.core.prPred name="p3" org.eventb.core.predicate="¬copies⊆dom(hold_related_copies)">
+<org.eventb.core.prIdent name="COPY" org.eventb.core.type="ℙ(COPY)"/>
+<org.eventb.core.prIdent name="USER" org.eventb.core.type="ℙ(USER)"/>
+<org.eventb.core.prIdent name="copies" org.eventb.core.type="ℙ(COPY)"/>
+<org.eventb.core.prIdent name="hold_related_copies" org.eventb.core.type="ℙ(COPY×USER)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p5" org.eventb.core.predicate="registered_users⊆USER">
+<org.eventb.core.prIdent name="USER" org.eventb.core.type="ℙ(USER)"/>
+<org.eventb.core.prIdent name="registered_users" org.eventb.core.type="ℙ(USER)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p7" org.eventb.core.predicate="copies_in_library⊆COPY">
+<org.eventb.core.prIdent name="COPY" org.eventb.core.type="ℙ(COPY)"/>
+<org.eventb.core.prIdent name="copies_in_library" org.eventb.core.type="ℙ(COPY)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p6" org.eventb.core.predicate="books_in_library⊆BOOK">
+<org.eventb.core.prIdent name="BOOK" org.eventb.core.type="ℙ(BOOK)"/>
+<org.eventb.core.prIdent name="books_in_library" org.eventb.core.type="ℙ(BOOK)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p1" org.eventb.core.predicate="¬copies⊆dom(copies_on_loan)">
+<org.eventb.core.prIdent name="COPY" org.eventb.core.type="ℙ(COPY)"/>
+<org.eventb.core.prIdent name="USER" org.eventb.core.type="ℙ(USER)"/>
+<org.eventb.core.prIdent name="copies" org.eventb.core.type="ℙ(COPY)"/>
+<org.eventb.core.prIdent name="copies_on_loan" org.eventb.core.type="ℙ(COPY×USER)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p2" org.eventb.core.predicate="copies⊈dom(hold_related_copies)">
+<org.eventb.core.prIdent name="COPY" org.eventb.core.type="ℙ(COPY)"/>
+<org.eventb.core.prIdent name="USER" org.eventb.core.type="ℙ(USER)"/>
+<org.eventb.core.prIdent name="copies" org.eventb.core.type="ℙ(COPY)"/>
+<org.eventb.core.prIdent name="hold_related_copies" org.eventb.core.type="ℙ(COPY×USER)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p4" org.eventb.core.predicate="notification∈BOOK ↔ USER">
+<org.eventb.core.prIdent name="BOOK" org.eventb.core.type="ℙ(BOOK)"/>
+<org.eventb.core.prIdent name="USER" org.eventb.core.type="ℙ(USER)"/>
+<org.eventb.core.prIdent name="notification" org.eventb.core.type="ℙ(BOOK×USER)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prPred name="p0" org.eventb.core.predicate="copies⊈dom(copies_on_loan)">
+<org.eventb.core.prIdent name="COPY" org.eventb.core.type="ℙ(COPY)"/>
+<org.eventb.core.prIdent name="USER" org.eventb.core.type="ℙ(USER)"/>
+<org.eventb.core.prIdent name="copies" org.eventb.core.type="ℙ(COPY)"/>
+<org.eventb.core.prIdent name="copies_on_loan" org.eventb.core.type="ℙ(COPY×USER)"/>
+</org.eventb.core.prPred>
+<org.eventb.core.prReas name="r0" org.eventb.core.prRID="org.eventb.core.seqprover.autoRewritesL4:0"/>
+<org.eventb.core.prReas name="r1" org.eventb.core.prRID="org.eventb.core.seqprover.typeRewrites:1"/>
+</org.eventb.core.prProof>
+<org.eventb.core.prProof name="RemoveHoldCopies/grd1/GRD"/>
+<org.eventb.core.prProof name="RemoveHoldCopies/grd2/GRD"/>
+<org.eventb.core.prProof name="RemoveHoldCopies/act1/SIM"/>
+<org.eventb.core.prProof name="RemoveHoldCopies/act2/SIM"/>
+</org.eventb.core.prFile>

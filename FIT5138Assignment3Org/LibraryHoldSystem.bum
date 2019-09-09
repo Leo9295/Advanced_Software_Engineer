@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd;de.prob.units.mchBase" version="5">
+<org.eventb.core.event name="'" org.eventb.core.comment="Initialisation" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="INITIALISATION">
+<org.eventb.core.action name="internal1" org.eventb.core.assignment="registered_users ≔ ∅" org.eventb.core.label="act1"/>
+<org.eventb.core.action name="'" org.eventb.core.assignment="books_in_library,library_book_sets ≔ ∅,∅" org.eventb.core.label="act2"/>
+<org.eventb.core.action name="internal2" org.eventb.core.assignment="copies_in_library,copies_on_shelf,copies_on_loan ≔ ∅,∅,∅" org.eventb.core.label="act3"/>
+<org.eventb.core.action name="internal3" org.eventb.core.assignment="holds,hold_books,hold_related_copies ≔ ∅,∅,∅" org.eventb.core.label="act4"/>
+</org.eventb.core.event>
+<org.eventb.core.event name=")" org.eventb.core.comment="hold event" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="Hold">
+<org.eventb.core.parameter name="'" org.eventb.core.comment="The book user wants to hold." org.eventb.core.identifier="book"/>
+<org.eventb.core.parameter name="(" org.eventb.core.comment="User who wants to hold a book." org.eventb.core.identifier="user"/>
+<org.eventb.core.guard name=")" org.eventb.core.comment="book needs to be a book in library" org.eventb.core.label="grd1" org.eventb.core.predicate="book ∈ books_in_library"/>
+<org.eventb.core.guard name="*" org.eventb.core.comment="user is a registered user." org.eventb.core.label="grd2" org.eventb.core.predicate="user ∈ registered_users "/>
+<org.eventb.core.guard name="+" org.eventb.core.comment="the relation of book and user is no a hold relation." org.eventb.core.label="grd3" org.eventb.core.predicate="book ↦ user ∉ holds"/>
+<org.eventb.core.guard name="." org.eventb.core.comment="ralated copies is the pairs of the copies related to the hold book and the user." org.eventb.core.label="grd4" org.eventb.core.predicate="related_copies ∈ (dom(library_book_sets ▷ {book}) → {user})"/>
+<org.eventb.core.guard name="-" org.eventb.core.comment="copies on hold has no coinside with copies on loan." org.eventb.core.label="grd5" org.eventb.core.predicate="related_copies ∩ copies_on_loan = ∅"/>
+<org.eventb.core.parameter name="/" org.eventb.core.comment="The pairs of the copies related to the book and the user." org.eventb.core.identifier="related_copies"/>
+<org.eventb.core.guard name="0" org.eventb.core.comment="All the copies related to this book are on loan." org.eventb.core.label="grd6" org.eventb.core.predicate="dom(library_book_sets ▷ {book}) ⊆ dom(copies_on_loan)"/>
+<org.eventb.core.action name="1" org.eventb.core.assignment="holds ≔ holds ∪ {book ↦ user}" org.eventb.core.comment="Add this book and user pair to hold." org.eventb.core.label="act1"/>
+<org.eventb.core.action name="4" org.eventb.core.assignment="hold_related_copies ≔ hold_related_copies ∪ related_copies" org.eventb.core.comment="Add all related copies pairs to hold_related_copies" org.eventb.core.label="act2"/>
+<org.eventb.core.action name="2" org.eventb.core.assignment="copies_on_loan ≔ copies_on_loan" org.eventb.core.label="act3"/>
+<org.eventb.core.action name="3" org.eventb.core.assignment="copies_on_shelf ≔ copies_on_shelf" org.eventb.core.label="act4"/>
+<org.eventb.core.guard name="5" org.eventb.core.comment="user cannot hold more than 3 books" org.eventb.core.label="grd7" org.eventb.core.predicate="card(holds ▷ {user}) ∈ 0‥2"/>
+</org.eventb.core.event>
+<org.eventb.core.variable name="*" org.eventb.core.comment="The hold pairs." org.eventb.core.identifier="holds"/>
+<org.eventb.core.variable name="6" org.eventb.core.comment="The books in hold pairs." org.eventb.core.identifier="hold_books"/>
+<org.eventb.core.variable name=";" org.eventb.core.comment="The pairs gives the information of the relation between users and hold copies." org.eventb.core.identifier="hold_related_copies"/>
+<org.eventb.core.variable name="+" org.eventb.core.comment="The users registered in library system." org.eventb.core.identifier="registered_users"/>
+<org.eventb.core.variable name="," org.eventb.core.comment="The books (title) in the library." org.eventb.core.identifier="books_in_library"/>
+<org.eventb.core.variable name="-" org.eventb.core.comment="Copies that the library has." org.eventb.core.identifier="copies_in_library"/>
+<org.eventb.core.variable name="." org.eventb.core.comment="Copies that are in the library(On bookshelf)." org.eventb.core.identifier="copies_on_shelf"/>
+<org.eventb.core.variable name="/" org.eventb.core.comment="Copies that is already on loan.(Pairs of copies and users)" org.eventb.core.identifier="copies_on_loan"/>
+<org.eventb.core.variable name="0" org.eventb.core.comment="The pairs of the book (title) and the copies in library." org.eventb.core.identifier="library_book_sets"/>
+<org.eventb.core.invariant name="1" org.eventb.core.comment="The relation here represents one user can hold many books, one book can be hold by many users" org.eventb.core.label="inv1" org.eventb.core.predicate="holds ∈ books_in_library ↔ registered_users"/>
+<org.eventb.core.refinesMachine name="2" org.eventb.core.target="BasicLibrary"/>
+<org.eventb.core.seesContext name="4" org.eventb.core.target="LibraryContext"/>
+<org.eventb.core.invariant name="5" org.eventb.core.comment="The hold book must be a book that has existed in library." org.eventb.core.label="inv2" org.eventb.core.predicate="hold_books ⊆ books_in_library "/>
+<org.eventb.core.invariant name="7" org.eventb.core.comment="The domain of hold are the books on hold." org.eventb.core.label="inv3" org.eventb.core.predicate="hold_books = dom(holds)"/>
+<org.eventb.core.invariant name=":" org.eventb.core.comment="one user can hold many related copies, one related copy can be hold by many users" org.eventb.core.label="inv4" org.eventb.core.predicate="hold_related_copies ∈ (dom(library_book_sets ▷ hold_books) ↔ registered_users)"/>
+<org.eventb.core.invariant name="=" org.eventb.core.comment="hold related copies have no coinside with copies on loan pairs." org.eventb.core.label="inv5" org.eventb.core.predicate="hold_related_copies ∩ copies_on_loan = ∅ "/>
+<org.eventb.core.event name="?" org.eventb.core.comment="Check if use is on hold of this book, if yes borrow this use one copy and delete book-user; copies-user pairs." org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="HoldPickup">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="Borrow"/>
+<org.eventb.core.guard name="(" org.eventb.core.comment="pair of this copy and user belongs to hold_related_copies" org.eventb.core.label="grd4" org.eventb.core.predicate="copy ↦ user ∈ hold_related_copies"/>
+<org.eventb.core.action name=")" org.eventb.core.assignment="holds ≔ holds ∖ {related_book ↦ user}" org.eventb.core.comment="exclude related book and user pair." org.eventb.core.label="act3"/>
+<org.eventb.core.parameter name="*" org.eventb.core.comment="book related the this copy" org.eventb.core.identifier="related_book"/>
+<org.eventb.core.parameter name="+" org.eventb.core.comment="pairs shows relation of all copies realted to the book with the user." org.eventb.core.identifier="related_copies"/>
+<org.eventb.core.guard name="," org.eventb.core.comment="find the related book(just one book element in this set)" org.eventb.core.label="grd5" org.eventb.core.predicate="related_book ∈ (ran({copy} ◁ library_book_sets)) "/>
+<org.eventb.core.guard name="-" org.eventb.core.comment="related_copies is the pairs of the copies and the suer." org.eventb.core.label="grd6" org.eventb.core.predicate="related_copies ∈ (dom(library_book_sets ▷ {related_book}) → {user})"/>
+<org.eventb.core.action name="." org.eventb.core.assignment="hold_related_copies ≔ hold_related_copies ∖ related_copies" org.eventb.core.comment="exclude related copies from hold_related_copies." org.eventb.core.label="act4"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="@" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="UserDeregisteredWithHold">
+<org.eventb.core.refinesEvent name="'" org.eventb.core.target="UserDeregister"/>
+<org.eventb.core.guard name="(" org.eventb.core.comment="user who wants to deregistered cannot hold any book, which means this user is not in any pair of holds." org.eventb.core.label="grd3" org.eventb.core.predicate="user ∉ ran(holds)"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="A" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="RemoveHoldCopies">
+<org.eventb.core.refinesEvent name="(" org.eventb.core.target="RemoveCopies"/>
+<org.eventb.core.guard name=")" org.eventb.core.comment="copies cannot be on hold" org.eventb.core.label="grd3" org.eventb.core.predicate="copies ⊈ dom(hold_related_copies)"/>
+</org.eventb.core.event>
+</org.eventb.core.machineFile>

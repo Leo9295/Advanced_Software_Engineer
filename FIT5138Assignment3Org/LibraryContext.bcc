@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.scContextFile org.eventb.core.accurate="true" org.eventb.core.configuration="org.eventb.core.fwd;de.prob.symbolic.ctxBase;de.prob.units.mchBase">
+<org.eventb.core.scAxiom name="'" org.eventb.core.label="axm1" org.eventb.core.predicate="book_sets∈COPY → BOOK" org.eventb.core.source="/FIT5138Assignment3/LibraryContext.buc|org.eventb.core.contextFile#LibraryContext|org.eventb.core.axiom#+" org.eventb.core.theorem="false"/>
+<org.eventb.core.scAxiom name="(" org.eventb.core.label="axm2" org.eventb.core.predicate="maxuser∈ℕ1" org.eventb.core.source="/FIT5138Assignment3/LibraryContext.buc|org.eventb.core.contextFile#LibraryContext|org.eventb.core.axiom#-" org.eventb.core.theorem="false"/>
+<org.eventb.core.scAxiom name=")" org.eventb.core.label="axm3" org.eventb.core.predicate="finite(USER)" org.eventb.core.source="/FIT5138Assignment3/LibraryContext.buc|org.eventb.core.contextFile#LibraryContext|org.eventb.core.axiom#." org.eventb.core.theorem="false"/>
+<org.eventb.core.scAxiom name="*" org.eventb.core.label="axm4" org.eventb.core.predicate="card(USER)=maxuser" org.eventb.core.source="/FIT5138Assignment3/LibraryContext.buc|org.eventb.core.contextFile#LibraryContext|org.eventb.core.axiom#\/" org.eventb.core.theorem="false"/>
+<org.eventb.core.scAxiom name="+" org.eventb.core.label="axm5" org.eventb.core.predicate="notification∈BOOK ↔ USER" org.eventb.core.source="/FIT5138Assignment3/LibraryContext.buc|org.eventb.core.contextFile#LibraryContext|org.eventb.core.axiom#2" org.eventb.core.theorem="false"/>
+<org.eventb.core.scCarrierSet name="BOOK" org.eventb.core.source="/FIT5138Assignment3/LibraryContext.buc|org.eventb.core.contextFile#LibraryContext|org.eventb.core.carrierSet#(" org.eventb.core.type="ℙ(BOOK)"/>
+<org.eventb.core.scCarrierSet name="COPY" org.eventb.core.source="/FIT5138Assignment3/LibraryContext.buc|org.eventb.core.contextFile#LibraryContext|org.eventb.core.carrierSet#)" org.eventb.core.type="ℙ(COPY)"/>
+<org.eventb.core.scCarrierSet name="NOTIFICATION" org.eventb.core.source="/FIT5138Assignment3/LibraryContext.buc|org.eventb.core.contextFile#LibraryContext|org.eventb.core.carrierSet#0" org.eventb.core.type="ℙ(NOTIFICATION)"/>
+<org.eventb.core.scCarrierSet name="USER" org.eventb.core.source="/FIT5138Assignment3/LibraryContext.buc|org.eventb.core.contextFile#LibraryContext|org.eventb.core.carrierSet#'" org.eventb.core.type="ℙ(USER)"/>
+<org.eventb.core.scConstant name="book_sets" org.eventb.core.source="/FIT5138Assignment3/LibraryContext.buc|org.eventb.core.contextFile#LibraryContext|org.eventb.core.constant#*" org.eventb.core.type="ℙ(COPY×BOOK)"/>
+<org.eventb.core.scConstant name="maxuser" org.eventb.core.source="/FIT5138Assignment3/LibraryContext.buc|org.eventb.core.contextFile#LibraryContext|org.eventb.core.constant#," org.eventb.core.type="ℤ"/>
+<org.eventb.core.scConstant name="notification" org.eventb.core.source="/FIT5138Assignment3/LibraryContext.buc|org.eventb.core.contextFile#LibraryContext|org.eventb.core.constant#1" org.eventb.core.type="ℙ(BOOK×USER)"/>
+</org.eventb.core.scContextFile>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.poFile org.eventb.core.poStamp="21">
+<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.poStamp="18">
+<org.eventb.core.poIdentifier name="BOOK" org.eventb.core.type="ℙ(BOOK)"/>
+<org.eventb.core.poIdentifier name="COPY" org.eventb.core.type="ℙ(COPY)"/>
+<org.eventb.core.poIdentifier name="NOTIFICATION" org.eventb.core.type="ℙ(NOTIFICATION)"/>
+<org.eventb.core.poIdentifier name="USER" org.eventb.core.type="ℙ(USER)"/>
+<org.eventb.core.poIdentifier name="book_sets" org.eventb.core.type="ℙ(COPY×BOOK)"/>
+<org.eventb.core.poIdentifier name="maxuser" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="notification" org.eventb.core.type="ℙ(BOOK×USER)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="axm4/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Axiom" org.eventb.core.poStamp="21">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/FIT5138Assignment3/LibraryContext.bpo|org.eventb.core.poFile#LibraryContext|org.eventb.core.poPredicateSet#HYP)"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="finite(USER)" org.eventb.core.source="/FIT5138Assignment3/LibraryContext.buc|org.eventb.core.contextFile#LibraryContext|org.eventb.core.axiom#\/"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/FIT5138Assignment3/LibraryContext.buc|org.eventb.core.contextFile#LibraryContext|org.eventb.core.axiom#\/"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/FIT5138Assignment3/LibraryContext.bpo|org.eventb.core.poFile#LibraryContext|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poSelHintSnd="/FIT5138Assignment3/LibraryContext.bpo|org.eventb.core.poFile#LibraryContext|org.eventb.core.poPredicateSet#HYP)"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="HYP)" org.eventb.core.parentSet="/FIT5138Assignment3/LibraryContext.bpo|org.eventb.core.poFile#LibraryContext|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="21">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="book_sets∈COPY → BOOK" org.eventb.core.source="/FIT5138Assignment3/LibraryContext.buc|org.eventb.core.contextFile#LibraryContext|org.eventb.core.axiom#+"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="maxuser∈ℕ1" org.eventb.core.source="/FIT5138Assignment3/LibraryContext.buc|org.eventb.core.contextFile#LibraryContext|org.eventb.core.axiom#-"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="finite(USER)" org.eventb.core.source="/FIT5138Assignment3/LibraryContext.buc|org.eventb.core.contextFile#LibraryContext|org.eventb.core.axiom#."/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/FIT5138Assignment3/LibraryContext.bpo|org.eventb.core.poFile#LibraryContext|org.eventb.core.poPredicateSet#HYP)" org.eventb.core.poStamp="21">
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="card(USER)=maxuser" org.eventb.core.source="/FIT5138Assignment3/LibraryContext.buc|org.eventb.core.contextFile#LibraryContext|org.eventb.core.axiom#\/"/>
+<org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="notification∈BOOK ↔ USER" org.eventb.core.source="/FIT5138Assignment3/LibraryContext.buc|org.eventb.core.contextFile#LibraryContext|org.eventb.core.axiom#2"/>
+</org.eventb.core.poPredicateSet>
+</org.eventb.core.poFile>

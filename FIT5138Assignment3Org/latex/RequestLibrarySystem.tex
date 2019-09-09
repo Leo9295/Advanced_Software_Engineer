@@ -1,0 +1,101 @@
+\documentclass[10pt,a4paper]{report}
+\usepackage{bsymb,b2latex}
+\begin{document}
+\SingleHeader{RequestLibrarySystem}
+\MACHINE{RequestLibrarySystem}{BasicLibrary}{}{}
+\VARIABLES{
+	\Variable{registered\_users}{The users registered in library system.}
+	\Variable{books\_in\_library}{The books (title) in the library.}
+	\Variable{copies\_in\_library}{Copies that the library has.}
+	\Variable{copies\_on\_shelf}{Copies that are in the library(On bookshelf).}
+	\Variable{copies\_on\_loan}{Copies that is already on loan.(Borrow pairs)}
+	\Variable{library\_book\_sets}{The pairs of the book (title) and the copies in library.}
+	\Variable{request}{The request pairs.}
+	\Variable{request\_hold}{The request hold pairs of copies and users.(This is used to keep a copy for request user.)}
+}
+\INVARIANTS{
+	\Invariant{inv1}{false}{$request \in{} (BOOK \setminus{} books\_in\_library) \pfun{} registered\_users $}{\\request is the pairs of books not in library and registered users.}
+	\Invariant{inv2}{false}{$request\_hold \in{} copies\_on\_shelf \pfun{} registered\_users $}{\\request hold is the pairs of copies on shelf and users.}
+}
+\EVENTS{
+\INITIALISATION{false}{}{
+	\ACTIONS{false}{
+		\Action{act1}{$registered\_users,books\_in\_library,copies\_in\_library,copies\_on\_shelf,copies\_on\_loan,library\_book\_sets \bcmeq{} \emptyset{},\emptyset{},\emptyset{},\emptyset{},\emptyset{},\emptyset{}$}{true}{}
+		\Action{act2}{$request,request\_hold \bcmeq{} \emptyset{},\emptyset{}$}{true}{}
+	}
+}
+\EVT{RequestNewBook}{false}{ordinary}{}{\\Request new book}{
+	\ANY{
+		\Param{user}{true}{user who wants to request a book}
+		\Param{book}{true}{the book is required}
+	}
+	\GUARDS{true}{
+		\Guard{grd1}{false}{$user \in{} registered\_users$}{true}{\\user needs to be a registered user}
+		\Guard{grd2}{false}{$book \notin{} books\_in\_library$}{true}{\\book is not a book in library}
+		\Guard{grd3}{false}{$book \mapsto{} user \notin{} request$}{true}{\\user has not sent request on this book before}
+		\Guard{grd4}{false}{$card(request \ranres{} \{user\}) \in{} 0\upto{}2$}{true}{\\user cannot request for more than 2 books}
+	}
+	\ACTIONS{true}{
+		\Action{act1}{$request \bcmeq{} request \bunion{} \{book \mapsto{} user\}$}{true}{\\add book to user pair to request list}
+	}
+}
+\EVT{AddRequestBook}{true}{ordinary}{AddBook}{\\Add request book(refine add book because this time the book is requested)}{
+	\ANY{
+		\Param{book}{false}{The book which is going to be added.}
+		\Param{copies}{false}{The related copies.}
+		\Param{book\_set}{false}{The pairs between book and the copies.(To explain book and corresponding copies.)}
+		\Param{user}{true}{user who request this book}
+		\Param{hold\_copy}{true}{the copy kept for the user}
+	}
+	\GUARDS{true}{
+		\Guard{grd1}{false}{$book \in{} BOOK$}{false}{\\The book needs to be one of the BOOK in the world.}
+		\Guard{grd2}{false}{$book \notin{} books\_in\_library$}{false}{\\This book is not in the library.}
+		\Guard{grd3}{false}{$copies \subseteq{} COPY$}{false}{\\Copies are copies in the world.}
+		\Guard{grd4}{false}{$book\_set \subseteq{} book\_sets$}{false}{\\The pairs of book and copies are subset of all books and copies pairs in the world.(Copies are under the book title. However, not all copies under the book title are added to library.)}
+		\Guard{grd5}{false}{$book\_set \in{} copies \tfun{} \{book\} $}{false}{\\Book set is the pairs of copies and book.}
+		\Guard{grd7}{false}{$hold\_copy \in{} copies$}{true}{\\the copy kept for the user is one of the copy added this time }
+		\Guard{grd6}{false}{$book \in{} dom(request)$}{true}{\\book is under request}
+		\Guard{grd8}{false}{$user \in{} ran(\{book\} \domres{} request)$}{true}{\\user has the request relation with this book}
+	}
+	\ACTIONS{true}{
+		\Action{act1}{$books\_in\_library \bcmeq{} books\_in\_library \bunion{} \{book\}$}{false}{\\Add this book to library.}
+		\Action{act2}{$copies\_in\_library \bcmeq{} copies\_in\_library \bunion{} copies$}{false}{\\Add all related copies to library.}
+		\Action{act3}{$copies\_on\_shelf \bcmeq{} copies\_on\_shelf \bunion{} copies$}{false}{\\Put all copies on shelf.}
+		\Action{act4}{$library\_book\_sets \bcmeq{} library\_book\_sets \bunion{} book\_set $}{false}{\\Add pairs to library ralation.}
+		\Action{act5}{$request \bcmeq{} request \setminus{} (\{book\} \domres{} request)$}{true}{\\exclude the request}
+		\Action{act6}{$request\_hold \bcmeq{} request\_hold \bunion{} \{hold\_copy \mapsto{} user\}$}{true}{\\add the pair of user and the copy kept for this user to the request hold list}
+	}
+}
+\EVT{RequestPickup}{true}{ordinary}{Borrow}{}{
+	\ANY{
+		\Param{user}{false}{User wants to borrow copy.}
+		\Param{copy}{false}{The copy of the user wants to borrow.}
+	}
+	\GUARDS{true}{
+		\Guard{grd1}{false}{$user \in{} registered\_users$}{false}{\\The user needs to be a registered user.}
+		\Guard{grd2}{false}{$copy \in{} copies\_on\_shelf$}{false}{\\Copy is not borrowed by other users.}
+		\Guard{grd3}{false}{$card(copies\_on\_loan \ranres{} \{user\}) \in{} 0\upto{}4$}{false}{\\The user cannot hold more than 4 books.}
+		\Guard{grd4}{false}{$copy \mapsto{} user \in{} request\_hold$}{true}{\\the user must have a request hold relation with this copy}
+	}
+	\ACTIONS{true}{
+		\Action{act1}{$copies\_on\_shelf \bcmeq{} copies\_on\_shelf \setminus{} \{copy\}$}{false}{\\Remove copy from shelf.}
+		\Action{act2}{$copies\_on\_loan \bcmeq{} copies\_on\_loan \bunion{} \{copy \mapsto{} user\}$}{false}{\\Give user the copy and add relation.}
+		\Action{act3}{$request\_hold \bcmeq{} request\_hold \setminus{} \{copy \mapsto{} user\}$}{true}{\\after the user get the copy, exclude this pair from request$\_$hold.}
+	}
+}
+\EVT{UserDegisteredWithRequest}{true}{ordinary}{UserDeregister}{}{
+	\ANY{
+		\Param{user}{false}{Use who wants to deregister.}
+	}
+	\GUARDS{true}{
+		\Guard{grd1}{false}{$user \in{} registered\_users $}{false}{\\The user who wants to deregister needs to be a registered user first. }
+		\Guard{grd2}{false}{$copies\_on\_loan \pfun{} \{user\} = \emptyset{} $}{false}{\\The user does not have any book that are not returned.}
+		\Guard{grd3}{false}{$user \notin{} ran(request) $}{true}{\\user wants to degistered cannot have any request which means this user cannot in any pair of the request.}
+	}
+	\ACTIONS{true}{
+		\Action{act1}{$registered\_users \bcmeq{} registered\_users \setminus{} \{user\}$}{false}{\\Exclude the use from registered users. }
+	}
+}
+}
+\END
+\end{document}

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.machineFile org.eventb.core.comment="Basic function of the library" org.eventb.core.configuration="org.eventb.core.fwd;de.prob.units.mchBase" version="5">
+<org.eventb.core.event name="'" org.eventb.core.comment="initialisation event" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="INITIALISATION">
+<org.eventb.core.action name="'" org.eventb.core.assignment="registered_users ≔ ∅" org.eventb.core.label="act1"/>
+<org.eventb.core.action name="(" org.eventb.core.assignment="books_in_library,library_book_sets ≔ ∅,∅" org.eventb.core.label="act2"/>
+<org.eventb.core.action name=")" org.eventb.core.assignment="copies_in_library,copies_on_shelf,copies_on_loan ≔ ∅,∅,∅" org.eventb.core.label="act3"/>
+</org.eventb.core.event>
+<org.eventb.core.seesContext name="(" org.eventb.core.target="LibraryContext"/>
+<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" name=")" org.eventb.core.comment="The users registered in library system." org.eventb.core.identifier="registered_users"/>
+<org.eventb.core.invariant name="/" org.eventb.core.comment="The registered users need to be the users in the world." org.eventb.core.label="inv1" org.eventb.core.predicate="registered_users ⊆ USER"/>
+<org.eventb.core.invariant name="0" org.eventb.core.comment="The books that the library has need to be the books in the world." org.eventb.core.label="inv2" org.eventb.core.predicate="books_in_library ⊆ BOOK"/>
+<org.eventb.core.invariant name="1" org.eventb.core.comment="The copies of the library has to be the copies in the world." org.eventb.core.label="inv3" org.eventb.core.predicate="copies_in_library ⊆ COPY"/>
+<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" name="2" org.eventb.core.comment="The books (title) in the library." org.eventb.core.identifier="books_in_library"/>
+<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" name="3" org.eventb.core.comment="Copies that the library has." org.eventb.core.identifier="copies_in_library"/>
+<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" name="4" org.eventb.core.comment="Copies that are in the library(On bookshelf)." org.eventb.core.identifier="copies_on_shelf"/>
+<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" name="5" org.eventb.core.comment="Copies that is already on loan.(Borrow pairs)" org.eventb.core.identifier="copies_on_loan"/>
+<org.eventb.core.invariant name="6" org.eventb.core.comment="The copies on loan are pairs in particial function because the user can borrow no copy and copy can have no user to borrow.  " org.eventb.core.label="inv4" org.eventb.core.predicate="copies_on_loan ∈ copies_in_library ⇸ registered_users"/>
+<org.eventb.core.invariant name="7" org.eventb.core.comment="Copies on shelf is the all copies of the library minus the copies that have been borrowed." org.eventb.core.label="inv5" org.eventb.core.predicate="copies_on_shelf = copies_in_library ∖ dom(copies_on_loan)"/>
+<org.eventb.core.event name=":" org.eventb.core.comment="Add book event" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="AddBook">
+<org.eventb.core.parameter name="'" org.eventb.core.comment="The book which is going to be added." org.eventb.core.identifier="book"/>
+<org.eventb.core.parameter name="(" org.eventb.core.comment="The related copies." org.eventb.core.identifier="copies"/>
+<org.eventb.core.guard name=")" org.eventb.core.comment="The book needs to be one of the BOOK in the world." org.eventb.core.label="grd1" org.eventb.core.predicate="book ∈ BOOK"/>
+<org.eventb.core.guard name="/" org.eventb.core.comment="This book is not in the library." org.eventb.core.label="grd2" org.eventb.core.predicate="book ∉ books_in_library"/>
+<org.eventb.core.guard name="*" org.eventb.core.comment="Copies are copies in the world." org.eventb.core.label="grd3" org.eventb.core.predicate="copies ⊆ COPY"/>
+<org.eventb.core.guard name="+" org.eventb.core.comment="The pairs of book and copies are subset of all books and copies pairs in the world.(Copies are under the book title. However, not all copies under the book title are added to library.)" org.eventb.core.label="grd4" org.eventb.core.predicate="book_set ⊆ book_sets"/>
+<org.eventb.core.guard name="-" org.eventb.core.comment="Book set is the pairs of copies and book." org.eventb.core.label="grd5" org.eventb.core.predicate="book_set ∈ copies → {book} "/>
+<org.eventb.core.parameter name="," org.eventb.core.comment="The pairs between book and the copies.(To explain book and corresponding copies.)" org.eventb.core.identifier="book_set"/>
+<org.eventb.core.action name="." org.eventb.core.assignment="books_in_library ≔ books_in_library ∪ {book}" org.eventb.core.comment="Add this book to library." org.eventb.core.label="act1"/>
+<org.eventb.core.action name="0" org.eventb.core.assignment="copies_in_library ≔ copies_in_library ∪ copies" org.eventb.core.comment="Add all related copies to library." org.eventb.core.label="act2"/>
+<org.eventb.core.action name="1" org.eventb.core.assignment="copies_on_shelf ≔ copies_on_shelf ∪ copies" org.eventb.core.comment="Put all copies on shelf." org.eventb.core.label="act3"/>
+<org.eventb.core.action name="2" org.eventb.core.assignment="library_book_sets ≔ library_book_sets ∪ book_set " org.eventb.core.comment="Add pairs to library ralation." org.eventb.core.label="act4"/>
+</org.eventb.core.event>
+<org.eventb.core.invariant name="&gt;" org.eventb.core.comment="library book sets are pairs of total function of copies in library and books in library, because all books in library have copies and all copies in library must have a related book. " org.eventb.core.label="inv6" org.eventb.core.predicate="library_book_sets ∈ copies_in_library → books_in_library"/>
+<org.eventb.core.variable de.prob.units.inferredUnitPragmaAttribute="" name="?" org.eventb.core.comment="The pairs of the book (title) and the copies in library." org.eventb.core.identifier="library_book_sets"/>
+<org.eventb.core.invariant name="@" org.eventb.core.comment="The book and copy relation in library is a subset of the book and copy relation in whole world." org.eventb.core.label="inv7" org.eventb.core.predicate="library_book_sets ⊆ book_sets"/>
+<org.eventb.core.event name="A" org.eventb.core.comment="User Register" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="UserRegister">
+<org.eventb.core.guard name="'" org.eventb.core.comment="New user needs to be one of the USER." org.eventb.core.label="grd1" org.eventb.core.predicate="new_user ∈ USER"/>
+<org.eventb.core.guard name="(" org.eventb.core.comment="New user cannot be a registered_users." org.eventb.core.label="grd2" org.eventb.core.predicate="new_user ∉ registered_users"/>
+<org.eventb.core.parameter name=")" org.eventb.core.comment="Use who want to be a member of the library." org.eventb.core.identifier="new_user"/>
+<org.eventb.core.guard name="*" org.eventb.core.comment="Registered users cannot be more than users in the world." org.eventb.core.label="grd3" org.eventb.core.predicate="registered_users ≠ USER"/>
+<org.eventb.core.action name="+" org.eventb.core.assignment="registered_users ≔ registered_users ∪ {new_user}" org.eventb.core.comment="Add user to registered_users." org.eventb.core.label="act1"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="B" org.eventb.core.comment="User Deregister" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="UserDeregister">
+<org.eventb.core.guard name="'" org.eventb.core.comment="The user who wants to deregister needs to be a registered user first. " org.eventb.core.label="grd1" org.eventb.core.predicate="user ∈ registered_users "/>
+<org.eventb.core.action name="(" org.eventb.core.assignment="registered_users ≔ registered_users ∖ {user}" org.eventb.core.comment="Exclude the user from registered users. " org.eventb.core.label="act1"/>
+<org.eventb.core.parameter name=")" org.eventb.core.comment="Use who wants to deregister." org.eventb.core.identifier="user"/>
+<org.eventb.core.guard name="*" org.eventb.core.comment="The user does not have any book that are not returned." org.eventb.core.label="grd2" org.eventb.core.predicate="copies_on_loan ⇸ {user} = ∅ "/>
+</org.eventb.core.event>
+<org.eventb.core.event name="C" org.eventb.core.comment="Borrow copy event." org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="Borrow">
+<org.eventb.core.parameter name="'" org.eventb.core.comment="User wants to borrow copy." org.eventb.core.identifier="user"/>
+<org.eventb.core.parameter name="(" org.eventb.core.comment="The copy that the user wants to borrow." org.eventb.core.identifier="copy"/>
+<org.eventb.core.guard name=")" org.eventb.core.comment="The user needs to be a registered user." org.eventb.core.label="grd1" org.eventb.core.predicate="user ∈ registered_users"/>
+<org.eventb.core.guard name="*" org.eventb.core.comment="Copy is not borrowed by other users." org.eventb.core.label="grd2" org.eventb.core.predicate="copy ∈ copies_on_shelf"/>
+<org.eventb.core.action name="+" org.eventb.core.assignment="copies_on_shelf ≔ copies_on_shelf ∖ {copy}" org.eventb.core.comment="Remove copy from shelf." org.eventb.core.label="act1"/>
+<org.eventb.core.action name="," org.eventb.core.assignment="copies_on_loan ≔ copies_on_loan ∪ {copy ↦ user}" org.eventb.core.comment="Give user the copy and add relation." org.eventb.core.label="act2"/>
+<org.eventb.core.guard name="-" org.eventb.core.comment="The user cannot hold more than 5 books." org.eventb.core.label="grd3" org.eventb.core.predicate="card(copies_on_loan ▷ {user}) ∈ 0‥4"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="D" org.eventb.core.comment="Return copy." org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="Return">
+<org.eventb.core.parameter name="'" org.eventb.core.comment="The copy will be returned." org.eventb.core.identifier="copy"/>
+<org.eventb.core.guard name="(" org.eventb.core.comment="Copy needs to be a copy has a relation of borrow." org.eventb.core.label="grd1" org.eventb.core.predicate="copy ∈ dom(copies_on_loan)"/>
+<org.eventb.core.action name=")" org.eventb.core.assignment="copies_on_shelf ≔ copies_on_shelf ∪ {copy}" org.eventb.core.comment="Add this copy to shelf." org.eventb.core.label="act1"/>
+<org.eventb.core.action name="*" org.eventb.core.assignment="copies_on_loan ≔ {copy} ⩤ copies_on_loan" org.eventb.core.comment="Exclude the borrow relation from the library borrow relations." org.eventb.core.label="act2"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="E" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="RemoveCopies">
+<org.eventb.core.parameter name="'" org.eventb.core.comment="copies that the library wants to remove" org.eventb.core.identifier="copies"/>
+<org.eventb.core.guard name="(" org.eventb.core.comment="copies are in the library" org.eventb.core.label="grd1" org.eventb.core.predicate="copies ⊆ copies_in_library"/>
+<org.eventb.core.guard name=")" org.eventb.core.comment="copies are not on loan" org.eventb.core.label="grd2" org.eventb.core.predicate="copies ⊈ dom(copies_on_loan)"/>
+<org.eventb.core.action name="." org.eventb.core.assignment="copies_on_shelf ≔  copies_on_shelf ∖ copies" org.eventb.core.comment="remove copies from library shelf" org.eventb.core.label="act1"/>
+<org.eventb.core.action name="*" org.eventb.core.assignment="copies_in_library ≔ copies_in_library ∖ copies" org.eventb.core.comment="remove copies from library" org.eventb.core.label="act2"/>
+<org.eventb.core.action name="-" org.eventb.core.assignment="library_book_sets ≔ library_book_sets ∖ (copies ◁ library_book_sets)" org.eventb.core.comment="exclude these book and copy relations from library_book_sets" org.eventb.core.label="act3"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="F" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="AddCopies">
+<org.eventb.core.parameter name="'" org.eventb.core.identifier="copies"/>
+<org.eventb.core.guard name=")" org.eventb.core.label="grd1" org.eventb.core.predicate="copies ⊈ copies_in_library"/>
+<org.eventb.core.guard name="*" org.eventb.core.label="grd2" org.eventb.core.predicate="book ∈ books_in_library"/>
+<org.eventb.core.action name="+" org.eventb.core.assignment="copies_in_library ≔ copies_in_library ∪ copies" org.eventb.core.comment="add copies to library" org.eventb.core.label="act1"/>
+<org.eventb.core.action name="1" org.eventb.core.assignment="copies_on_shelf ≔  copies_on_shelf ∪ copies" org.eventb.core.comment="add copies to library shelf" org.eventb.core.label="act2"/>
+<org.eventb.core.action name="," org.eventb.core.assignment="library_book_sets ≔ library_book_sets ∪ set" org.eventb.core.comment="add copies and book pairs to library_book_sets" org.eventb.core.label="act3"/>
+<org.eventb.core.parameter name="-" org.eventb.core.identifier="book"/>
+<org.eventb.core.guard name="." org.eventb.core.label="grd3" org.eventb.core.predicate="set ∈ (copies → {book})" org.eventb.core.theorem="true"/>
+<org.eventb.core.parameter name="/" org.eventb.core.identifier="set"/>
+<org.eventb.core.guard name="0" org.eventb.core.label="grd4" org.eventb.core.predicate="set ⊆ book_sets"/>
+</org.eventb.core.event>
+</org.eventb.core.machineFile>

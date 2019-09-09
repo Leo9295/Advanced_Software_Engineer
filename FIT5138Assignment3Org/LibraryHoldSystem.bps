@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.psFile>
+<org.eventb.core.psStatus name="INITIALISATION/inv1/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="64" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="INITIALISATION/inv2/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="64" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="INITIALISATION/inv3/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="64" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="INITIALISATION/inv4/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="64" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="INITIALISATION/inv5/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="64" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="Hold/grd7/WD" org.eventb.core.confidence="0" org.eventb.core.poStamp="64" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="Hold/inv1/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="64" org.eventb.core.psBroken="true" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="Hold/inv3/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="64" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="Hold/inv4/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="64" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="Hold/inv5/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="64" org.eventb.core.psBroken="true" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="Hold/copies_on_loan/EQL" org.eventb.core.confidence="1000" org.eventb.core.poStamp="64" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="Hold/copies_on_shelf/EQL" org.eventb.core.confidence="1000" org.eventb.core.poStamp="64" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="HoldPickup/inv1/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="64" org.eventb.core.psBroken="true" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="HoldPickup/inv3/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="64" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="HoldPickup/inv4/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="64" org.eventb.core.psBroken="true" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="HoldPickup/inv5/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="64" org.eventb.core.psBroken="true" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="UserDeregisteredWithHold/inv1/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="64" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="UserDeregisteredWithHold/inv4/INV" org.eventb.core.confidence="1000" org.eventb.core.poStamp="64" org.eventb.core.psManual="false"/>
+<org.eventb.core.psStatus name="RemoveHoldCopies/inv4/INV" org.eventb.core.confidence="0" org.eventb.core.poStamp="64" org.eventb.core.psManual="false"/>
+</org.eventb.core.psFile>

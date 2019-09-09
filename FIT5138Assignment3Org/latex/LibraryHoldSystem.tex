@@ -1,0 +1,77 @@
+\documentclass[10pt,a4paper]{report}
+\usepackage{bsymb,b2latex}
+\begin{document}
+\SingleHeader{LibraryHoldSystem}
+\MACHINE{LibraryHoldSystem}{BasicLibrary}{LibraryContext}{}
+\VARIABLES{
+	\Variable{holds}{The hold pairs.}
+	\Variable{hold\_books}{The books in hold pairs.}
+	\Variable{hold\_related\_copies}{The pairs contain copies that are related with hold books.}
+	\Variable{registered\_users}{The users registered in library system.}
+	\Variable{books\_in\_library}{The books (title) in the library.}
+	\Variable{copies\_in\_library}{Copies that the library has.}
+	\Variable{copies\_on\_shelf}{Copies that are in the library(On bookshelf).}
+	\Variable{copies\_on\_loan}{Copies that is already on loan.(Pairs of copies and users)}
+	\Variable{library\_book\_sets}{The pairs of the book (title) and the copies in library.}
+}
+\INVARIANTS{
+	\Invariant{inv1}{false}{$holds \in{} books\_in\_library \pfun{} registered\_users$}{\\Hold is pairs in the partial function of books in library and registered users. }
+	\Invariant{inv2}{false}{$hold\_books \subseteq{} books\_in\_library $}{\\The hold book must be a book in library.}
+	\Invariant{inv3}{false}{$hold\_books = dom(holds)$}{\\The domain of hold are the books on hold.}
+	\Invariant{inv5}{false}{$hold\_related\_copies \in{} (dom(library\_book\_sets \ranres{} hold\_books) \pfun{} registered\_users)$}{\\hold related copies is the pairs of the copies in hold with registered users}
+	\Invariant{inv6}{false}{$hold\_related\_copies \binter{} copies\_on\_loan = \emptyset{} $}{\\hold related copies have no coinside with copies on loan pairs.}
+}
+\EVENTS{
+\INITIALISATION{false}{\\Initialisation}{
+	\ACTIONS{false}{
+		\Action{act1}{$registered\_users,books\_in\_library,copies\_in\_library,copies\_on\_shelf,copies\_on\_loan,library\_book\_sets \bcmeq{} \emptyset{},\emptyset{},\emptyset{},\emptyset{},\emptyset{},\emptyset{}$}{true}{}
+		\Action{act2}{$holds,hold\_books,hold\_related\_copies \bcmeq{} \emptyset{},\emptyset{},\emptyset{}$}{true}{}
+	}
+}
+\EVT{Hold}{false}{ordinary}{}{\\hold event}{
+	\ANY{
+		\Param{book}{true}{The book user wants to hold.}
+		\Param{user}{true}{User who wants to hold a book.}
+		\Param{related\_copies}{true}{The pairs of the copies related to the book and the user.}
+	}
+	\GUARDS{true}{
+		\Guard{grd1}{false}{$book \in{} books\_in\_library$}{true}{\\book needs to be a book in library}
+		\Guard{grd2}{false}{$user \in{} registered\_users $}{true}{\\user is a registered user.}
+		\Guard{grd3}{false}{$book \mapsto{} user \notin{} holds$}{true}{\\the relation of book and user is no a hold relation.}
+		\Guard{grd4}{false}{$related\_copies \in{} (dom(library\_book\_sets \ranres{} \{book\}) \tfun{} \{user\})$}{true}{\\ralated copies is the pairs of the copies related to the hold book and the user.}
+		\Guard{grd5}{false}{$related\_copies \binter{} copies\_on\_loan = \emptyset{}$}{true}{\\copies on hold has no coinside with copies on loan.}
+		\Guard{grd6}{false}{$dom(library\_book\_sets \ranres{} \{book\}) \subseteq{} dom(copies\_on\_loan)$}{true}{\\All the copies related to this book are on loan.}
+		\Guard{grd7}{false}{$card(holds \ranres{} \{user\}) \in{} 0\upto{}2$}{true}{\\user cannot hold more than 2 book}
+	}
+	\ACTIONS{true}{
+		\Action{act1}{$holds \bcmeq{} holds \bunion{} \{book \mapsto{} user\}$}{true}{\\Add this book and user pair to hold.}
+		\Action{act2}{$hold\_related\_copies \bcmeq{} hold\_related\_copies \bunion{} related\_copies$}{true}{\\Add all related copies pairs to hold$\_$related$\_$copies}
+		\Action{act3}{$copies\_on\_loan \bcmeq{} copies\_on\_loan$}{true}{}
+		\Action{act4}{$copies\_on\_shelf \bcmeq{} copies\_on\_shelf$}{true}{}
+	}
+}
+\EVT{HoldPickup}{true}{ordinary}{Borrow}{\\Check if use is on hold of this book, if yes borrow this use one copy and delete book-user; copies-user pairs.}{
+	\ANY{
+		\Param{user}{false}{User wants to borrow copy.}
+		\Param{copy}{false}{The copy of the user wants to borrow.}
+		\Param{related\_book}{true}{book related the this copy}
+		\Param{related\_copies}{true}{pairs of all copies realted to the book to the user.}
+	}
+	\GUARDS{true}{
+		\Guard{grd1}{false}{$user \in{} registered\_users$}{false}{\\The user needs to be a registered user.}
+		\Guard{grd2}{false}{$copy \in{} copies\_on\_shelf$}{false}{\\Copy is not borrowed by other users.}
+		\Guard{grd3}{false}{$card(copies\_on\_loan \ranres{} \{user\}) \in{} 0\upto{}4$}{false}{\\The user cannot hold more than 4 books.}
+		\Guard{grd4}{false}{$copy \mapsto{} user \in{} hold\_related\_copies$}{true}{\\pair of this copy and user belongs to hold$\_$related$\_$copies}
+		\Guard{grd5}{false}{$related\_book \in{} (ran(\{copy\} \domres{} library\_book\_sets)) $}{true}{\\find the related book(just one book element in this set)}
+		\Guard{grd6}{false}{$related\_copies \in{} (dom(library\_book\_sets \ranres{} \{related\_book\}) \tfun{} \{user\})$}{true}{\\related$\_$copies is the pairs of the copies and the suer.}
+	}
+	\ACTIONS{true}{
+		\Action{act1}{$copies\_on\_shelf \bcmeq{} copies\_on\_shelf \setminus{} \{copy\}$}{false}{\\Remove copy from shelf.}
+		\Action{act2}{$copies\_on\_loan \bcmeq{} copies\_on\_loan \bunion{} \{copy \mapsto{} user\}$}{false}{\\Give user the copy and add relation.}
+		\Action{act3}{$holds \bcmeq{} holds \setminus{} \{related\_book \mapsto{} user\}$}{true}{\\exclude related book and user pair.}
+		\Action{act4}{$hold\_related\_copies \bcmeq{} hold\_related\_copies \setminus{} related\_copies$}{true}{\\exclude related copies from hold$\_$related$\_$copies.}
+	}
+}
+}
+\END
+\end{document}
